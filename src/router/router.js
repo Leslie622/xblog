@@ -7,6 +7,7 @@ const Diary = () => import("../views/diary/Diary.vue")
 const Mark = () => import("../views/mark/Mark.vue")
 const MainBlog = () => import("../views/mainBlog/MainBlog.vue")
 const About = () => import("../views/about/About.vue")
+const Friends = () => import("../views/friends/Friends.vue")
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: "/About",
     component: About,
     meta: { title: 'About | Leslie' }
+  },
+  {
+    path: "/Friends",
+    component: Friends,
+    meta: { title: 'Friends | Leslie' }
   }
 ]
 

@@ -1,13 +1,16 @@
 <template>
-  <div class="indexPage">
-    <div class="siteLogo">Leslie</div>
-    <div class="homeMenu">
-      <router-link
-        v-for="item in this.linkList"
-        :to="item.path"
-        class="linkItem"
-        >{{ item.value }}</router-link
-      >
+  <div class="wrapper">
+    <div class="indexPage">
+      <div class="siteLogo">Leslie</div>
+      <div class="homeMenu">
+        <router-link
+          v-for="(item, index) in this.linkList"
+          :to="item.path"
+          class="linkItem"
+          :key="index"
+          >{{ item.value }}</router-link
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -22,6 +25,7 @@ export default {
         { path: "/Diary", value: "DIARY" },
         { path: "/Mark", value: "MARK" },
         { path: "/About", value: "ABOUT" },
+        { path: "/Friends", value: "FRIENDS" },
       ],
     };
   },
@@ -29,31 +33,41 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 .indexPage {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 260px;
   font-family: Arial;
 }
 
 .siteLogo {
   flex: 1;
+  margin: 0 auto;
   font-family: Monoton-Regular;
-  font-size: 110px;
+  font-size: 7rem;
   text-align: center;
 }
 
 .homeMenu {
-  display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 .linkItem {
   flex: 1;
-  font-size: 25px;
+  padding: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #249ffd;
 }
