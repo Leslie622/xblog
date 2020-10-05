@@ -1,30 +1,10 @@
 <template>
   <div>
     <button class="btn">clickme</button>
-    <header class="header">
-      <div class="header-inner">
-        <div class="brand-container">
-          <div class="brand">Leslie</div>
-          <div class="brand-sub">Leslie's Blog</div>
-        </div>
-        <ul class="menu">
-          <li v-for="(item, index) in linkList" :key="index">
-            <router-link :to="item.path" class="menuItem">
-              <i :class="item.iconClass"></i>{{ item.value }}</router-link
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
+    <main-header class="header"></main-header>
     <main class="main">
       <div class="main-inner">
-        <div class="sidebar">
-          <ul class="articleCategory">
-            <li v-for="(item, index) in articleCategory" :key="index">
-              <i :class="item.iconClass"></i>{{ item.name }}
-            </li>
-          </ul>
-        </div>
+        <div class="sidebar"></div>
         <div class="articleList">
           <div class="articleItem"></div>
           <div class="articleItem"></div>
@@ -35,6 +15,7 @@
 </template>
  
 <script>
+import MainHeader from "./ingredient/MainHeader";
 export default {
   name: "",
   data() {
@@ -47,13 +28,29 @@ export default {
         { path: "/Friends", value: "友链", iconClass: "iconfont icon-pengyou" },
         { path: "/Friends", value: "搜索", iconClass: "el-icon-search" },
       ],
-      articleCategory: [
-        { name: "Html", iconClass: "iconfont icon-html" },
-        { name: "Css", iconClass: "iconfont icon-css" },
-        { name: "JavaScript", iconClass: "iconfont icon-java-script" },
-        { name: "Vue", iconClass: "iconfont icon-vue" },
+      selectOptions: [
+        {
+          value: "选项1",
+          label: "Html",
+        },
+        {
+          value: "选项2",
+          label: "Css",
+        },
+        {
+          value: "选项3",
+          label: "Javascript",
+        },
+        {
+          value: "选项4",
+          label: "Vue",
+        },
       ],
+      articleCategory: "",
     };
+  },
+  components: {
+    MainHeader,
   },
   beforeCreate() {
     document.body.style.background = "#eee";
@@ -72,76 +69,6 @@ export default {
   background-color: azure;
 }
 
-.header-inner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 10px;
-  width: 240px;
-  height: 390px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  background-color: #fff;
-}
-
-.brand-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 130px;
-  color: white;
-  background-color: #222;
-}
-
-.brand {
-  margin-bottom: 20px;
-  font-family: YatraOne-Regular;
-  font-size: 45px;
-}
-
-.brand-sub {
-  font-family: Arial;
-  font-size: 10px;
-}
-
-.menu {
-  margin-top: 10px;
-}
-
-.menu i {
-  padding: 0 15px;
-  vertical-align: bottom;
-  font-size: 17px;
-  line-height: 40px;
-}
-
-.menuItem {
-  display: block;
-  width: 100%;
-  height: 40px;
-  font-family: Arial;
-  font-size: 11px;
-  line-height: 40px;
-  transition: all 0.2s;
-}
-
-.menuItem:hover {
-  background-color: #f5f5f5;
-}
-
-.btn {
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-
-.btn:active + .header {
-  height: 390px;
-  overflow: auto;
-  transition: height 1s;
-}
-
 .main {
   display: flex;
   justify-content: center;
@@ -155,19 +82,28 @@ export default {
   background-color: pink;
 }
 
+.btn {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.btn:active + .header {
+  height: 450px;
+  transition: height 1s;
+}
+
 .sidebar {
   position: sticky;
   top: 10px;
   width: 240px;
   height: 300px;
-  margin: 400px 10px 0;
+  margin: 460px 10px 0;
   background-color: lightskyblue;
 }
 
 .articleList {
   width: calc(100% - 260px);
-
-  /* height: 40rem; */
   background-color: lightyellow;
 }
 
@@ -204,8 +140,7 @@ export default {
   }
   .header {
     width: auto;
-    height: 200px;
-    overflow: hidden;
+    height: 450px;
   }
   .articleItem {
     width: calc(100vw - 20px);

@@ -25,23 +25,22 @@
   src: url(../font/Paralines-Regular.otf);
 }
 
-@font-face{
+@font-face {
   font-family: "YatraOne-Regular";
   src: url(../font/YatraOne-Regular.ttf);
 }
+
 html {
   font-size: 16px;
+  /* 消除移动端点击背景颜色 */
+  -webkit-tap-highlight-color: transparent;
 }
-
-/* 400- */
 
 @media screen and (max-width: 400px) {
   html {
     font-size: 9px;
   }
 }
-
-/* 400-500 */
 
 @media screen and (max-width: 500px) and (min-width:400px) {
   html {
@@ -85,7 +84,7 @@ body {
 .icon {
   width: 1em;
   height: 1em;
-  overflow: hidden;
   vertical-align: -.15em;
+  overflow: hidden;
   fill: currentColor;
 }
