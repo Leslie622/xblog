@@ -71,15 +71,13 @@ export default {
 <style scoped>
 @import "~assets/css/element-ui/mainblog-select.css";
 
-
-
 .header-inner {
   position: relative;
   display: flex;
   flex-direction: column;
   left: 10px;
   width: 240px;
-  height: 450px;
+  height: 440px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: #fff;
@@ -130,39 +128,10 @@ export default {
   background-color: #f5f5f5;
 }
 
-
-
-
-@media (min-width: 1600px) {
-  .main-inner {
-    width: 73%;
-  }
-  .header {
-    width: 73%;
-  }
-}
-
 @media (max-width: 990px) {
-  .sidebar {
-    display: none;
-  }
-  .articleList {
-    width: 100%;
-    margin: 10px 10px 0;
-  }
-  .main-inner {
-    width: auto;
-  }
   .header-inner {
     position: static;
     width: 100%;
-  }
-  .header {
-    width: auto;
-    height: 450px;
-  }
-  .articleItem {
-    width: calc(100vw - 20px);
   }
 }
 </style>

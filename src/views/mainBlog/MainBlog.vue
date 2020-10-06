@@ -4,7 +4,7 @@
     <main-header class="header"></main-header>
     <main class="main">
       <div class="main-inner">
-        <div class="sidebar"></div>
+        <main-side-bar />
         <div class="articleList">
           <div class="articleItem"></div>
           <div class="articleItem"></div>
@@ -16,6 +16,8 @@
  
 <script>
 import MainHeader from "./ingredient/MainHeader";
+import MainSideBar from "./ingredient/MainSideBar";
+
 export default {
   name: "",
   data() {
@@ -29,28 +31,17 @@ export default {
         { path: "/Friends", value: "搜索", iconClass: "el-icon-search" },
       ],
       selectOptions: [
-        {
-          value: "选项1",
-          label: "Html",
-        },
-        {
-          value: "选项2",
-          label: "Css",
-        },
-        {
-          value: "选项3",
-          label: "Javascript",
-        },
-        {
-          value: "选项4",
-          label: "Vue",
-        },
+        { value: "选项1", label: "Html" },
+        { value: "选项2", label: "Css" },
+        { value: "选项3", label: "Javascript" },
+        { value: "选项4", label: "Vue" },
       ],
       articleCategory: "",
     };
   },
   components: {
     MainHeader,
+    MainSideBar,
   },
   beforeCreate() {
     document.body.style.background = "#eee";
@@ -66,20 +57,17 @@ export default {
   width: 1200px;
   height: 0;
   margin: 0 auto;
-  background-color: azure;
 }
 
 .main {
   display: flex;
   justify-content: center;
-  background-color: red;
 }
 
 .main-inner {
   display: flex;
   width: 1200px;
   height: 2000px;
-  background-color: pink;
 }
 
 .btn {
@@ -89,17 +77,8 @@ export default {
 }
 
 .btn:active + .header {
-  height: 450px;
+  height: 440px;
   transition: height 1s;
-}
-
-.sidebar {
-  position: sticky;
-  top: 10px;
-  width: 240px;
-  height: 300px;
-  margin: 460px 10px 0;
-  background-color: lightskyblue;
 }
 
 .articleList {
@@ -134,13 +113,9 @@ export default {
   .main-inner {
     width: auto;
   }
-  .header-inner {
-    position: static;
-    width: 100%;
-  }
   .header {
     width: auto;
-    height: 450px;
+    height: 440px;
   }
   .articleItem {
     width: calc(100vw - 20px);

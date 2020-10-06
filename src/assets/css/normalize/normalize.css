@@ -16,6 +16,10 @@ h1 {
   font-size: 2em;
 }
 
+p{
+  margin: 0;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
