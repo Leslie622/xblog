@@ -18,7 +18,6 @@ export default {
 <style scoped>
 .articleList {
   width: calc(100% - 260px);
-  background-color: lightyellow;
 }
 
 @media (max-width: 990px) {
