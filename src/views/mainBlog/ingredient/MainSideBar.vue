@@ -126,4 +126,10 @@ export default {
 .links-of-author div {
   flex: 1;
 }
+
+@media (max-width: 990px) {
+  .sidebar {
+    display: none;
+  }
+}
 </style>

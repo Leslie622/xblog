@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <div class="header-inner">
       <div class="brand-container">
         <div class="brand">Leslie</div>
@@ -71,6 +71,13 @@ export default {
 <style scoped>
 @import "~assets/css/element-ui/mainblog-select.css";
 
+.header {
+  width: 1200px;
+  height: 0;
+  margin: 0 auto;
+  transition: height 0.8s;
+}
+
 .header-inner {
   position: relative;
   display: flex;
@@ -132,6 +139,23 @@ export default {
   .header-inner {
     position: static;
     width: 100%;
+  }
+  .header {
+    width: auto;
+    height: 130px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 990px) {
+  .header {
+    transition: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header {
+    width: 73%;
   }
 }
 </style>

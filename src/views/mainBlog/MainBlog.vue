@@ -1,14 +1,11 @@
 <template>
-  <div>
+  <div class="mainBlog">
     <button class="btn">clickme</button>
-    <main-header class="header"></main-header>
+    <main-header></main-header>
     <main class="main">
       <div class="main-inner">
         <main-side-bar />
-        <div class="articleList">
-          <div class="articleItem"></div>
-          <div class="articleItem"></div>
-        </div>
+        <main-article-list></main-article-list>
       </div>
     </main>
   </div>
@@ -17,6 +14,7 @@
 <script>
 import MainHeader from "./ingredient/MainHeader";
 import MainSideBar from "./ingredient/MainSideBar";
+import MainArticleList from "./ingredient/MainArticleList";
 
 export default {
   name: "",
@@ -42,6 +40,7 @@ export default {
   components: {
     MainHeader,
     MainSideBar,
+    MainArticleList,
   },
   beforeCreate() {
     document.body.style.background = "#eee";
@@ -53,12 +52,6 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  width: 1200px;
-  height: 0;
-  margin: 0 auto;
-}
-
 .main {
   display: flex;
   justify-content: center;
@@ -78,26 +71,11 @@ export default {
 
 .btn:active + .header {
   height: 440px;
-  transition: height 1s;
-}
 
-.articleList {
-  width: calc(100% - 260px);
-  background-color: lightyellow;
-}
-
-.articleItem {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 10px;
-  background-color: black;
 }
 
 @media (min-width: 1600px) {
   .main-inner {
-    width: 73%;
-  }
-  .header {
     width: 73%;
   }
 }
@@ -106,19 +84,8 @@ export default {
   .sidebar {
     display: none;
   }
-  .articleList {
-    width: 100%;
-    margin: 10px 10px 0;
-  }
   .main-inner {
     width: auto;
-  }
-  .header {
-    width: auto;
-    height: 440px;
-  }
-  .articleItem {
-    width: calc(100vw - 20px);
   }
 }
 </style>
