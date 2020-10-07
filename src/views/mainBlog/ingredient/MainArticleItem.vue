@@ -5,13 +5,13 @@
       <span>
         <i class="iconfont icon-fabu1"></i>
         <span class="create-time time"
-          ><span class="describe">发布于</span> 2020-09-12</span
+          ><span class="describe">发布于</span>2020-09-12</span
         >
       </span>
       <span>
         <i class="iconfont icon-gengxin"></i
         ><span class="updata-time time"
-          ><span class="describe">更新于</span> 2020-10-1</span
+          ><span class="describe">更新于</span>2020-10-1</span
         >
       </span>
       <span>
@@ -21,9 +21,7 @@
       </span>
     </div>
     <div class="digest">
-      如图，真空中均匀带电且单位面积带电量为 的圆面垂直穿过直线 l，其半径为
-      R，圆面与直线恰为圆心。直线 l 上距离圆心 x 距离处有一点 P。试求 P
-      点处的场强大小。
+      博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
     </div>
     <div class="read-more-wrapper">
       <div class="read-more">
@@ -53,8 +51,8 @@ export default {
 }
 
 .title {
-  padding: 0 50px;
   margin: 40px 0;
+  padding: 0 50px;
   font-weight: 600;
   font-size: 2rem;
 }
@@ -78,7 +76,7 @@ export default {
 }
 
 .time {
-  padding: 3px 0;
+  padding: 2px 0;
   border-bottom: 1px dashed #999;
 }
 
@@ -88,9 +86,13 @@ export default {
   color: #999;
 }
 
+.describe {
+  margin-right: 5px;
+}
+
 .tag {
   margin-right: 6px;
-  padding: 3px 0;
+  padding: 2px 0;
   border-bottom: 1px solid #999;
 }
 

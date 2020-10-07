@@ -4,7 +4,6 @@
       <div class="brand-container">
         <main-switch-icon @click.native="SwitchHeader" ref="SwitchIcon" />
         <div class="brand">Leslie</div>
-        <div class="brand-sub">Leslie's Blog</div>
       </div>
       <div class="select-wrapper">
         <el-select
@@ -66,16 +65,17 @@ export default {
         },
       ],
       articleCategory: "",
-      isActive: false,
     };
   },
   mounted() {
+    let that = this;
     window.addEventListener("resize", function (res) {
       if (res.currentTarget.innerWidth > 990) {
         document.querySelector(".header").style.height = "0px";
       }
       if (res.currentTarget.innerWidth < 990) {
         document.querySelector(".header").style.height = "130px";
+        that.$refs.SwitchIcon.isActive = false;
       }
     });
   },
@@ -108,7 +108,7 @@ export default {
   height: 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  transition: height 0.8s;
+  transition: height 0.5s;
 }
 
 .header-inner {
@@ -127,21 +127,14 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   height: 130px;
   color: white;
   background-color: #222;
 }
 
 .brand {
-  margin-bottom: 20px;
   font-family: YatraOne-Regular;
   font-size: 45px;
-}
-
-.brand-sub {
-  font-family: Arial;
-  font-size: 10px;
 }
 
 .menu {

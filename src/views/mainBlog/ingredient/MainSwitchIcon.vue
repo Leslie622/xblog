@@ -36,7 +36,7 @@ export default {
 .SwitchNavBarBtn .Switchicon {
   display: block;
   padding: 3px 0;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 
 .SwitchNavBarBtn .Switchicon::before {
@@ -44,10 +44,9 @@ export default {
   display: block;
   width: 28px;
   height: 2px;
-  border-top-right-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-radius: 2px;
   background-color: #fff;
-  transition: transform 0.2s ease 0.1s, background-color 0.3s ease;
+  transition: transform .2s ease .1s, background-color .3s ease;
 }
 
 .active .Switchicon:nth-child(1)::before {
@@ -76,4 +75,5 @@ export default {
     display: none;
   }
 }
+
 </style>
