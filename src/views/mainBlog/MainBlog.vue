@@ -59,7 +59,6 @@ export default {
 .main-inner {
   display: flex;
   width: 1200px;
-  height: 2000px;
 }
 
 @media (min-width: 1600px) {

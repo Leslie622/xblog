@@ -10,12 +10,13 @@
           v-model="articleCategory"
           placeholder="选择您想要看的文章类型"
           class="articleSelect"
+          @change="switchCategory"
         >
           <el-option
             v-for="item in selectOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id"
           >
           </el-option>
         </el-select>
@@ -33,7 +34,7 @@
  
 <script>
 import MainSwitchIcon from "./MainSwitchIcon";
-
+import { request } from "network/request";
 export default {
   name: "",
   data() {
@@ -46,31 +47,27 @@ export default {
         { path: "/Friends", value: "友链", iconClass: "iconfont icon-pengyou" },
         { path: "/Friends", value: "搜索", iconClass: "el-icon-search" },
       ],
-      selectOptions: [
-        {
-          value: "选项1",
-          label: "Html",
-        },
-        {
-          value: "选项2",
-          label: "Css",
-        },
-        {
-          value: "选项3",
-          label: "Javascript",
-        },
-        {
-          value: "选项4",
-          label: "Vue",
-        },
-      ],
+      selectOptions: [],
       articleCategory: "",
     };
+  },
+  created() {
+    request({
+      method: "get",
+      url: "/blog/category/query?user_id=8",
+    }).then((res) => {
+      this.selectOptions = res.data.data;
+      console.log(res);
+    });
   },
   mounted() {
     let that = this;
   },
   methods: {
+    switchCategory(res) {
+      this.$store.commit("saveCateId", res);
+      this.$bus.$emit("requestAgain");
+    },
     SwitchHeader() {
       this.$refs.SwitchIcon.isActive = !this.$refs.SwitchIcon.isActive;
       if (this.$refs.SwitchIcon.isActive === true) {

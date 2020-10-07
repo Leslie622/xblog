@@ -4,11 +4,11 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    user_id: ""
+    cate_id: "66"
   },
   mutations: {
-    saveUserId(state,foo) {
-      state.user_id = foo
+    saveCateId(state,foo) {
+      state.cate_id = foo
     }
   }
 })

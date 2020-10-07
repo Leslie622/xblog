@@ -20,12 +20,22 @@ export default {
     };
   },
   created() {
+    console.log(this.$store.state.cate_id);
     request({
       method: "get",
-      url: `/blog/query/withcategory?cate_id=${75}&pageNum=1&pageSize=10`,
+      url: `/blog/query/withcategory?cate_id=${this.$store.state.cate_id}&pageNum=1&pageSize=10`,
     }).then((res) => {
-      console.log(res);
       this.articleDatas = res.data.data;
+    });
+  },
+  mounted() {
+    this.$bus.$on("requestAgain", () => {
+      request({
+        method: "get",
+        url: `/blog/query/withcategory?cate_id=${this.$store.state.cate_id}&pageNum=1&pageSize=10`,
+      }).then((res) => {
+        this.articleDatas = res.data.data;
+      });
     });
   },
   components: {
