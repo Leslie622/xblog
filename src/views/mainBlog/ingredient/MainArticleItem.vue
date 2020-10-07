@@ -1,17 +1,19 @@
 <template>
   <div class="articleItem">
-    <div class="title">这是我的第一篇博客</div>
+    <div class="title">{{ articleData.title }}</div>
     <div class="bar">
       <span>
         <i class="iconfont icon-fabu1"></i>
         <span class="create-time time"
-          ><span class="describe">发布于</span>2020-09-12</span
+          ><span class="describe">发布于</span
+          >{{ articleData.create_time.substring(0, 10) }}</span
         >
       </span>
       <span>
         <i class="iconfont icon-gengxin"></i
         ><span class="updata-time time"
-          ><span class="describe">更新于</span>2020-10-1</span
+          ><span class="describe">更新于</span
+          >{{ articleData.update_time.substring(0, 10) }}</span
         >
       </span>
       <span>
@@ -34,6 +36,12 @@
 <script>
 export default {
   name: "",
+  props: {
+    articleData: {
+      type: Object,
+    },
+  },
+  computed: {},
 };
 </script>
 
@@ -44,7 +52,7 @@ export default {
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
-  font-family: serif;
+  font-family: Kaiti, serif;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
@@ -53,7 +61,6 @@ export default {
 .title {
   margin: 40px 0;
   padding: 0 50px;
-  font-weight: 600;
   font-size: 2rem;
 }
 
@@ -120,7 +127,7 @@ export default {
   line-height: 2;
   color: #555;
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.3s linear;
 }
 
 .read-more::after {
@@ -131,7 +138,7 @@ export default {
   width: 0;
   height: 100%;
   background-color: #222;
-  transition: all 0.4s;
+  transition: all 0.3s linear;
 }
 
 .read-more-text {
@@ -145,7 +152,7 @@ export default {
 
 .read-more:hover {
   border-color: #222;
-  box-shadow: 0 2px 5px 0 rgba(148, 148, 148, 0.7);
+  box-shadow: 0 2px 4px 0 rgba(148, 148, 148, 0.7);
   color: white;
   transform: translateY(-5px);
 }

@@ -85,7 +85,7 @@ export default {
 
 .description {
   margin: 0 0 25px;
-  font-size: 10px;
+  font-size: 13px;
   color: #999;
 }
 
@@ -93,7 +93,7 @@ export default {
   display: flex;
   width: 100%;
   padding: 0 25px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .statistics span {

@@ -69,15 +69,6 @@ export default {
   },
   mounted() {
     let that = this;
-    window.addEventListener("resize", function (res) {
-      if (res.currentTarget.innerWidth > 990) {
-        document.querySelector(".header").style.height = "0px";
-      }
-      if (res.currentTarget.innerWidth < 990) {
-        document.querySelector(".header").style.height = "130px";
-        that.$refs.SwitchIcon.isActive = false;
-      }
-    });
   },
   methods: {
     SwitchHeader() {
@@ -90,6 +81,17 @@ export default {
           document.querySelector(".header").style.height = "130px";
         }
       }
+    },
+    listenerResize() {
+      window.addEventListener("resize", function (res) {
+        if (res.currentTarget.innerWidth > 990) {
+          document.querySelector(".header").style.height = "0px";
+        }
+        if (res.currentTarget.innerWidth < 990) {
+          document.querySelector(".header").style.height = "130px";
+          this.$refs.SwitchIcon.isActive = false;
+        }
+      });
     },
   },
   components: {
@@ -151,7 +153,7 @@ export default {
   display: block;
   width: 100%;
   height: 40px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 40px;
   transition: all 0.2s;
 }
