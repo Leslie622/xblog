@@ -3,6 +3,7 @@
     <main-article-item
       v-for="(item, index) in articleDatas"
       :articleData="item"
+      :key="index"
     />
   </div>
 </template>
@@ -20,23 +21,22 @@ export default {
     };
   },
   created() {
-    console.log(this.$store.state.cate_id);
-    request({
-      method: "get",
-      url: `/blog/query/withcategory?cate_id=${this.$store.state.cate_id}&pageNum=1&pageSize=10`,
-    }).then((res) => {
-      this.articleDatas = res.data.data;
-    });
+    this.requestCateData();
   },
   mounted() {
     this.$bus.$on("requestAgain", () => {
+      this.requestCateData();
+    });
+  },
+  methods: {
+    requestCateData() {
       request({
         method: "get",
         url: `/blog/query/withcategory?cate_id=${this.$store.state.cate_id}&pageNum=1&pageSize=10`,
       }).then((res) => {
         this.articleDatas = res.data.data;
       });
-    });
+    },
   },
   components: {
     MainArticleItem,

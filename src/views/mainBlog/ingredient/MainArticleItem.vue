@@ -167,6 +167,9 @@ export default {
   .describe {
     display: none;
   }
+  .digest {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 320px) {

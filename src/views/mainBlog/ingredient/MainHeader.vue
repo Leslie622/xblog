@@ -57,11 +57,10 @@ export default {
       url: "/blog/category/query?user_id=8",
     }).then((res) => {
       this.selectOptions = res.data.data;
-      console.log(res);
     });
   },
   mounted() {
-    let that = this;
+    this.listenerResize();
   },
   methods: {
     switchCategory(res) {
@@ -80,13 +79,14 @@ export default {
       }
     },
     listenerResize() {
+      let that = this;
       window.addEventListener("resize", function (res) {
         if (res.currentTarget.innerWidth > 990) {
           document.querySelector(".header").style.height = "0px";
         }
         if (res.currentTarget.innerWidth < 990) {
           document.querySelector(".header").style.height = "130px";
-          this.$refs.SwitchIcon.isActive = false;
+          that.$refs.SwitchIcon.isActive = false;
         }
       });
     },
