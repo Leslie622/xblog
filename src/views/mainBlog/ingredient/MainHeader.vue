@@ -150,7 +150,7 @@ export default {
   display: block;
   width: 100%;
   height: 40px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 40px;
   transition: all 0.2s;
 }

@@ -49,6 +49,7 @@ export default {
   position: sticky;
   top: 10px;
   width: 240px;
+  min-width: 240px;
   height: 300px;
   margin: 450px 10px 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
@@ -61,8 +62,6 @@ export default {
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   text-align: center;
 }
 
