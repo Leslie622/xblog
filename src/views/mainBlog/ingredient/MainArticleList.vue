@@ -22,8 +22,14 @@ export default {
 
 @media (max-width: 990px) {
   .articleList {
-    width: 100%;
     margin-top: 6px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 990px) {
+  .articleList {
+    margin-right: 10px;
   }
 }
 </style>

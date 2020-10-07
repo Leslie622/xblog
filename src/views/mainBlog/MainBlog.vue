@@ -1,6 +1,5 @@
 <template>
   <div class="mainBlog">
-    <button class="btn">clickme</button>
     <main-header></main-header>
     <main class="main">
       <div class="main-inner">
@@ -61,17 +60,6 @@ export default {
   display: flex;
   width: 1200px;
   height: 2000px;
-}
-
-.btn {
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-
-.btn:active + .header {
-  height: 440px;
-
 }
 
 @media (min-width: 1600px) {

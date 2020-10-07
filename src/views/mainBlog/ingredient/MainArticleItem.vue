@@ -46,15 +46,17 @@ export default {
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
-  font-family: zhengkai;
+  font-family: serif;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
 }
 
 .title {
+  padding: 0 50px;
   margin: 40px 0;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .bar {
@@ -63,7 +65,7 @@ export default {
   margin-bottom: 20px;
   width: 100%;
   height: 15px;
-  font-size: 13px;
+  font-size: 1rem;
   text-align: center;
   line-height: 15px;
   color: #777;
@@ -76,7 +78,7 @@ export default {
 }
 
 .time {
-  padding: 2px 0;
+  padding: 3px 0;
   border-bottom: 1px dashed #999;
 }
 
@@ -88,7 +90,7 @@ export default {
 
 .tag {
   margin-right: 6px;
-  padding: 2px 0;
+  padding: 3px 0;
   border-bottom: 1px solid #999;
 }
 
@@ -109,9 +111,10 @@ export default {
 
 .read-more {
   position: relative;
-  padding: 2px 25px;
+  padding: 0 20px;
   border: 2px solid #555;
   border-radius: 3px;
+  font-size: 1.2rem;
   line-height: 2;
   color: #555;
   cursor: pointer;

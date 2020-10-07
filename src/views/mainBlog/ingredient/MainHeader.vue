@@ -2,6 +2,7 @@
   <header class="header">
     <div class="header-inner">
       <div class="brand-container">
+        <main-switch-icon @click.native="SwitchHeader" ref="SwitchIcon" />
         <div class="brand">Leslie</div>
         <div class="brand-sub">Leslie's Blog</div>
       </div>
@@ -32,6 +33,8 @@
 </template>
  
 <script>
+import MainSwitchIcon from "./MainSwitchIcon";
+
 export default {
   name: "",
   data() {
@@ -63,7 +66,35 @@ export default {
         },
       ],
       articleCategory: "",
+      isActive: false,
     };
+  },
+  mounted() {
+    window.addEventListener("resize", function (res) {
+      if (res.currentTarget.innerWidth > 990) {
+        document.querySelector(".header").style.height = "0px";
+      }
+      if (res.currentTarget.innerWidth < 990) {
+        document.querySelector(".header").style.height = "130px";
+      }
+    });
+  },
+  methods: {
+    SwitchHeader() {
+      this.$refs.SwitchIcon.isActive = !this.$refs.SwitchIcon.isActive;
+      if (this.$refs.SwitchIcon.isActive === true) {
+        document.querySelector(".header").style.height = "440px";
+      } else {
+        var result = window.matchMedia("(max-width: 990px)");
+        if (result.matches) {
+          console.log(result.matches);
+          document.querySelector(".header").style.height = "130px";
+        }
+      }
+    },
+  },
+  components: {
+    MainSwitchIcon,
   },
 };
 </script>
@@ -72,12 +103,12 @@ export default {
 @import "~assets/css/element-ui/mainblog-select.css";
 
 .header {
+  margin: 0 auto;
   width: 1200px;
   height: 0;
-  margin: 0 auto;
-  transition: height 0.8s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: height 0.8s;
 }
 
 .header-inner {

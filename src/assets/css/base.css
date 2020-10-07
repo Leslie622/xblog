@@ -21,24 +21,8 @@
 }
 
 @font-face {
-  font-family: "Paralines-Regular";
-  src: url(../font/Paralines-Regular.otf);
-}
-
-@font-face {
   font-family: "YatraOne-Regular";
   src: url(../font/YatraOne-Regular.ttf);
-}
-
-@font-face {
-  font-family: "zhengkai";
-  src: url(../font/zhengkai.ttf);
-}
-/* 汉仪楷体简 */
-
-@font-face {
-  font-family: "kai3";
-  src: url(../font/kai3.TTF);
 }
 
 html {
@@ -49,7 +33,7 @@ html {
 
 @media screen and (max-width: 400px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
@@ -59,9 +43,15 @@ html {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 760px) {
   html {
-    font-size: 15px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 6px;
   }
 }
 
