@@ -87,7 +87,6 @@ export default {
       } else {
         var result = window.matchMedia("(max-width: 990px)");
         if (result.matches) {
-          console.log(result.matches);
           document.querySelector(".header").style.height = "130px";
         }
       }
