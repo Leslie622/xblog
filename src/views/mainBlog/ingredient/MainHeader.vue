@@ -8,7 +8,6 @@
       <div class="select-wrapper">
         <el-select
           v-model="articleCategory"
-          placeholder="选择您想要看的文章类型"
           class="articleSelect"
           @change="switchCategory"
         >
@@ -17,6 +16,7 @@
             :key="item.id"
             :label="item.name"
             :value="item.id"
+            class="a"
           >
           </el-option>
         </el-select>
@@ -57,8 +57,10 @@ export default {
       url: "/blog/category/query?user_id=8",
     }).then((res) => {
       this.selectOptions = res.data.data;
+      this.articleCategory = this.selectOptions[0].id;
     });
   },
+
   mounted() {
     this.listenerResize();
   },
@@ -101,6 +103,8 @@ export default {
 @import "~assets/css/element-ui/mainblog-select.css";
 
 .header {
+  position: sticky;
+  top: 0;
   margin: 0 auto;
   width: 1200px;
   height: 0;
@@ -165,6 +169,7 @@ export default {
     width: 100%;
   }
   .header {
+    position: static;
     width: auto;
     height: 130px;
     overflow: hidden;

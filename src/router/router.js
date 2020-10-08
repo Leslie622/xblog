@@ -3,11 +3,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const Home = () => import("views/home/Home.vue")
-const Diary = () => import("../views/diary/Diary.vue")
-const Mark = () => import("../views/mark/Mark.vue")
-const MainBlog = () => import("../views/mainBlog/MainBlog.vue")
-const About = () => import("../views/about/About.vue")
-const Friends = () => import("../views/friends/Friends.vue")
+const Diary = () => import("views/diary/Diary.vue")
+const Mark = () => import("views/mark/Mark.vue")
+const MainBlog = () => import("views/mainBlog/MainBlog.vue")
+const About = () => import("views/about/About.vue")
+const Friends = () => import("views/friends/Friends.vue")
+const Detail = () => import("views/detail/Detail.vue")
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     path: "/Friends",
     component: Friends,
     meta: { title: 'Friends | Leslie' }
+  },
+  {
+    path: "/Detail",
+    component: Detail,
+    meta: { title: 'Detail | Leslie' }
   }
 ]
 

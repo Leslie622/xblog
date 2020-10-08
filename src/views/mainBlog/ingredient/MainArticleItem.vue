@@ -12,7 +12,7 @@
       <span>
         <i class="iconfont icon-gengxin"></i
         ><span class="updata-time time"
-          ><span class="describe">更新于</span
+          ><span class="describe">更改于</span
           >{{ articleData.update_time.substring(0, 10) }}</span
         >
       </span>
@@ -26,7 +26,7 @@
       博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
     </div>
     <div class="read-more-wrapper">
-      <div class="read-more">
+      <div class="read-more" @click="gotoDetail">
         <span class="read-more-text">阅读全文 »</span>
       </div>
     </div>
@@ -41,7 +41,15 @@ export default {
       type: Object,
     },
   },
-  computed: {},
+  methods: {
+    gotoDetail() {
+      let Detail = this.$router.resolve({
+        path: "/Detail",
+        query: { id: this.articleData.id },
+      });
+      window.open(Detail.href, "_blank");
+    },
+  },
 };
 </script>
 

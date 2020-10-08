@@ -47,11 +47,11 @@ export default {
 <style scoped>
 .sidebar {
   position: sticky;
-  top: 10px;
+  top: 450px;
+  margin: 450px 10px 0;
   width: 240px;
   min-width: 240px;
   height: 300px;
-  margin: 450px 10px 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
@@ -66,8 +66,8 @@ export default {
 }
 
 .avatar {
-  width: 100%;
   margin: 20px 0;
+  width: 100%;
 }
 
 .avatar img {
@@ -90,8 +90,8 @@ export default {
 
 .statistics {
   display: flex;
-  width: 100%;
   padding: 0 25px;
+  width: 100%;
   font-size: 12px;
 }
 
@@ -116,9 +116,9 @@ export default {
 
 .links-of-author {
   display: flex;
-  width: 100%;
   margin-top: 30px;
   padding: 0 60px;
+  width: 100%;
   color: rgb(122, 122, 122);
 }
 
