@@ -8,10 +8,21 @@
 }
 
 .articleSelect {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+.articleSelect::before {
+  content: "已选择的文章分类";
+  position: absolute;
+  top: 13px;
+  right: 30px;
+  z-index: 1;
+  font-size: 10px;
+  color: #c0c4cc;
 }
 
 .articleSelect .el-input {
@@ -31,5 +42,8 @@
   }
   .el-select-dropdown {
     min-width: 98% !important;
+  }
+  .articleSelect::before{
+    right: 60px;
   }
 }

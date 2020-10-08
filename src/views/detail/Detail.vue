@@ -4,7 +4,7 @@
     appear
   >
     <div class="container">
-      <div class="toc"></div>
+      <div class="toc markdown-body"></div>
       <div class="content">
         <mavon-editor
           v-html="blogContentHTML"
@@ -27,24 +27,29 @@ export default {
       blogContentHTML: null,
     };
   },
-  // beforeCreate() {
-  //   //创建之前完成时关闭导航
-  //   this.$bus.$emit("switchMenu", false);
-  //   //获取数据
-  //   request({
-  //     method: "get",
-  //     url: `/blog/detail?id=${this.$route.query.id}`,
-  //   }).then((res) => {
-  //     this.blogContentHTML = res.data.data.content;
-  //   });
-  // },
-  // updated() {
-  //   let ul = document.querySelectorAll("ul")[0];
-  //   let h3 = document.querySelectorAll("h3")[0];
-  //   let mulu = document.querySelector(".toc");
-  //   mulu.appendChild(h3);
-  //   mulu.appendChild(ul);
-  // },
+  beforeCreate() {
+    document.body.style.background = "#eee";
+    //创建之前完成时关闭导航
+    this.$bus.$emit("switchMenu", false);
+    //获取数据
+    request({
+      method: "get",
+      url: `/blog/detail?id=${this.$route.query.id}`,
+    }).then((res) => {
+      this.blogContentHTML = res.data.data.content;
+    });
+  },
+  updated() {
+    let ul = document.querySelectorAll("ul")[0];
+    let h3 = document.querySelectorAll("h3")[0];
+    let mulu = document.querySelector(".toc");
+    mulu.appendChild(h3);
+    mulu.appendChild(ul);
+  },
+
+  beforeDestroy() {
+    document.body.style.background = "";
+  },
 };
 </script>
 
@@ -75,7 +80,6 @@ export default {
 
 .articleContent {
   z-index: 0;
-  margin-top: 30px;
   padding: 0 20px 80px;
   font-family: 幼圆;
   font-size: 15px;

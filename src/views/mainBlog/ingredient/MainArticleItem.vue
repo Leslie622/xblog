@@ -60,7 +60,7 @@ export default {
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
-  font-family: Kaiti, serif;
+  font-family: 幼圆;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
@@ -91,7 +91,7 @@ export default {
 }
 
 .time {
-  padding: 2px 0;
+  padding: 3px 0;
   border-bottom: 1px dashed #999;
 }
 
@@ -107,7 +107,7 @@ export default {
 
 .tag {
   margin-right: 6px;
-  padding: 2px 0;
+  padding: 3px 0;
   border-bottom: 1px solid #999;
 }
 
