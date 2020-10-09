@@ -4,7 +4,9 @@
     appear
   >
     <div class="container">
-      <div class="toc markdown-body"></div>
+      <div class="toc-wrapper">
+        <div class="toc markdown-body"></div>
+      </div>
       <div class="content">
         <mavon-editor
           v-html="blogContentHTML"
@@ -57,24 +59,31 @@ export default {
 @import "~assets/css/markdown/mavon-editor-index.css";
 
 .container {
+  display: flex;
+  justify-content: center;
   height: 100vh;
   font-family: 幼圆;
   overflow-y: scroll;
 }
 
-.toc {
-  position: fixed;
-  margin-left: 20px;
-  padding: 10px;
-  width: 400px;
-  height: 100vh;
-  border-right: 1px solid rgb(204, 204, 204);
+.toc-wrapper {
+  position: sticky;
+  top: 10px;
   overflow: hidden;
   overflow-y: scroll;
 }
 
+.toc {
+  box-sizing: border-box;
+  margin-right: 10px;
+  padding: 10px 10px 20px;
+  width: 300px;
+
+  /* height: 100%; */
+  border-right: 1px solid rgb(204, 204, 204);
+}
+
 .content {
-  margin-left: 550px;
   width: 55%;
 }
 

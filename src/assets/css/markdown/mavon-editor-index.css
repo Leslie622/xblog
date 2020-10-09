@@ -6,13 +6,18 @@
 
 /* 详情页目录样式 */
 
+.toc.markdown-body {
+  font-family: 幼圆;
+  background-color: white;
+}
+
 .toc.markdown-body h3 {
   font-size: 20px;
   text-align: center;
 }
 
 .toc.markdown-body ol, .toc.markdown-body ul {
-  padding-left: 1em;
+  padding-left: .8em;
 }
 
 .toc.markdown-body a:hover {
@@ -22,7 +27,7 @@
 .toc.markdown-body a {
   display: block;
   width: 100%;
-  font-size: 14px;
+  font-size: 17px;
   color: black;
   transition: all .3s;
 }
