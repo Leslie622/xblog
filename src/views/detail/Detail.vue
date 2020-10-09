@@ -78,8 +78,6 @@ export default {
   margin-right: 10px;
   padding: 10px 10px 20px;
   width: 300px;
-
-  /* height: 100%; */
   border-right: 1px solid rgb(204, 204, 204);
 }
 
