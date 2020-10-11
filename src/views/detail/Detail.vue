@@ -10,7 +10,7 @@
       <div class="content">
         <mavon-editor
           v-html="blogContentHTML"
-          codeStyle="tomorrow"
+          codeStyle="paraiso-light"
           :boxShadow="false"
           class="articleContent"
         />
@@ -69,27 +69,41 @@ export default {
 .toc-wrapper {
   position: sticky;
   top: 10px;
+  margin-right: 15px;
   overflow: hidden;
   overflow-y: scroll;
 }
 
 .toc {
   box-sizing: border-box;
-  margin-right: 10px;
   padding: 10px 10px 20px;
   width: 300px;
   border-right: 1px solid rgb(204, 204, 204);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .content {
-  width: 55%;
+  width: 50%;
 }
 
 .articleContent {
   z-index: 0;
-  padding: 0 20px 80px;
+  margin-bottom: 10px;
+  padding: 0 1rem 80px;
   font-family: 幼圆;
-  font-size: 15px;
+  font-size: 18px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   color: #333;
+}
+
+@media (max-width: 900px) {
+  .toc-wrapper {
+    display: none;
+  }
+  .content {
+    width: 100%;
+  }
 }
 </style>

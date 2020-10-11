@@ -62,14 +62,14 @@ body {
 /* 滚动条 */
 
 ::-webkit-scrollbar {
-  /* width: 10px;
-  border-radius: 15px; */
-  display: none;
+  width: 3px;
+  height: 5px;
+  border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(211, 210, 210);
   -webkit-border-radius: 15px;
 }
 
