@@ -11,6 +11,7 @@
         layout="prev, pager, next"
         :total="30"
         class="articlePagination"
+        :current-page="pageNum"
         @current-change="currentChange"
         @next-click="currentChange"
         @prev-click="currentChange"
@@ -30,35 +31,45 @@ export default {
     return {
       articleDatas: [],
       isPagination: true,
+      pageNum: 1,
+      articleCategory: "",
     };
   },
   created() {
-    this.requestCateData();
-  },
-  mounted() {
-    this.$bus.$on("requestAgain", () => {
-      this.requestCateData();
-      //刷新分页器
-      this.isPagination = false;
-      this.$nextTick(() => {
-        this.isPagination = true;
-      });
+    request({
+      method: "get",
+      url: "/blog/category/query?user_id=8",
+    }).then((res) => {
+      //有本地数据的情况下，获取本地，否则获取默认值
+      if (window.localStorage.getItem("articleCategory")) {
+        this.articleCategory = +window.localStorage.getItem("articleCategory");
+      } else {
+        this.articleCategory = res.data.data[0].id;
+      }
+      if (window.localStorage.getItem("pageNum")) {
+        this.pageNum = +window.localStorage.getItem("pageNum");
+        this.requestCateData(+window.localStorage.getItem("pageNum"));
+      } else {
+        this.requestCateData(this.pageNum);
+      }
     });
   },
   methods: {
-    requestCateData(pageNum = 1) {
+    //分页请求
+    requestCateData(pageNum) {
       request({
         method: "get",
-        url: `/blog/query/withcategory?cate_id=${this.$store.state.cate_id}&pageNum=${pageNum}&pageSize=10`,
+        url: `/blog/query/withcategory?cate_id=${this.articleCategory}&pageNum=${pageNum}&pageSize=10`,
       }).then((res) => {
         this.articleDatas = res.data.data;
       });
     },
+    //更改页码
     currentChange(pageNum) {
-      this.requestCateData(pageNum);
+      window.localStorage.setItem("pageNum", pageNum);
+      location.reload();
     },
   },
-
   components: {
     MainArticleItem,
   },

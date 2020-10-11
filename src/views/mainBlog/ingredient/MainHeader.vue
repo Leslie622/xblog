@@ -57,7 +57,12 @@ export default {
       url: "/blog/category/query?user_id=8",
     }).then((res) => {
       this.selectOptions = res.data.data;
+      //没有本地数据的情况下，默认第一个id
       this.articleCategory = this.selectOptions[0].id;
+      //有本地数据的情况下，切换id
+      if (window.localStorage.getItem("articleCategory")) {
+        this.articleCategory = +window.localStorage.getItem("articleCategory");
+      }
     });
   },
 
@@ -66,8 +71,12 @@ export default {
   },
   methods: {
     switchCategory(res) {
-      this.$store.commit("saveCateId", res);
-      this.$bus.$emit("requestAgain");
+      //切换分类id
+      window.localStorage.setItem("articleCategory", res);
+      //初始化pageNum
+      window.localStorage.setItem("pageNum", 1);
+      //刷新页面
+      location.reload();
     },
     SwitchHeader() {
       this.$refs.SwitchIcon.isActive = !this.$refs.SwitchIcon.isActive;
