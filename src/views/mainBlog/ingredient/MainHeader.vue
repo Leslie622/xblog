@@ -114,6 +114,7 @@ export default {
 .header {
   position: sticky;
   top: 0;
+  z-index: 10;
   margin: 0 auto;
   width: 1200px;
   height: 0;

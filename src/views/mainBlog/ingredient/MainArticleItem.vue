@@ -1,36 +1,38 @@
 <template>
-  <div class="articleItem">
-    <div class="title">{{ articleData.title }}</div>
-    <div class="bar">
-      <span>
-        <i class="iconfont icon-fabu1"></i>
-        <span class="create-time time"
-          ><span class="describe">发布于</span
-          >{{ articleData.create_time.substring(0, 10) }}</span
-        >
-      </span>
-      <span>
-        <i class="iconfont icon-gengxin"></i
-        ><span class="updata-time time"
-          ><span class="describe">更改于</span
-          >{{ articleData.update_time.substring(0, 10) }}</span
-        >
-      </span>
-      <span>
-        <i class="iconfont icon-biaoqian"></i>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-      </span>
-    </div>
-    <div class="digest">
-      博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
-    </div>
-    <div class="read-more-wrapper">
-      <div class="read-more" @click="gotoDetail">
-        <span class="read-more-text">阅读全文 »</span>
+  <transition appear name="slideDown">
+    <div class="articleItem">
+      <div class="title">{{ articleData.title }}</div>
+      <div class="bar">
+        <span>
+          <i class="iconfont icon-fabu1"></i>
+          <span class="create-time time"
+            ><span class="describe">发布于</span
+            >{{ articleData.create_time.substring(0, 10) }}</span
+          >
+        </span>
+        <span>
+          <i class="iconfont icon-gengxin"></i
+          ><span class="updata-time time"
+            ><span class="describe">更改于</span
+            >{{ articleData.update_time.substring(0, 10) }}</span
+          >
+        </span>
+        <span>
+          <i class="iconfont icon-biaoqian"></i>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </span>
+      </div>
+      <div class="digest">
+        博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
+      </div>
+      <div class="read-more-wrapper">
+        <div class="read-more" @click="gotoDetail">
+          <span class="read-more-text">阅读全文 »</span>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
  
 <script>
@@ -116,6 +118,7 @@ export default {
   padding: 30px;
   width: 100%;
   font-size: 1.4rem;
+  transform: translate3d(0, 0, 0);
 }
 
 .read-more-wrapper {

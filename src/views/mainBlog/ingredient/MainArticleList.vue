@@ -1,23 +1,25 @@
 <template>
-  <div class="articleList">
-    <main-article-item
-      v-for="(item, index) in articleDatas"
-      :articleData="item"
-      :key="index"
-    />
-    <div class="Pagination" v-if="isPagination">
-      <el-pagination
-        background
-        layout="prev, pager, next"
-        :total="30"
-        class="articlePagination"
-        :current-page="pageNum"
-        @current-change="currentChange"
-        @next-click="currentChange"
-        @prev-click="currentChange"
-      ></el-pagination>
+  <transition appear name="slideDown">
+    <div class="articleList">
+      <main-article-item
+        v-for="(item, index) in articleDatas"
+        :articleData="item"
+        :key="index"
+      />
+      <div class="Pagination" v-if="isPagination">
+        <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="30"
+          class="articlePagination"
+          :current-page="pageNum"
+          @current-change="currentChange"
+          @next-click="currentChange"
+          @prev-click="currentChange"
+        ></el-pagination>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
  
 <script>
@@ -104,6 +106,21 @@ export default {
 @media (min-width: 990px) {
   .articleList {
     margin-right: 10px;
+  }
+}
+
+.slideDown-enter-to {
+  animation: move 2s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 </style>
