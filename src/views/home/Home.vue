@@ -17,7 +17,7 @@
  
 <script>
 export default {
-  name: "",
+  name: "Home",
   data() {
     return {
       linkList: [
@@ -28,6 +28,11 @@ export default {
         { path: "/Friends", value: "FRIENDS" },
       ],
     };
+  },
+  beforeRouteEnter(to, from, next) {
+    window.document.body.style.backgroundImage =
+      "linear-gradient(339deg, rgba(47, 47, 47, .02) 0%, rgba(47, 47, 47, .02) 42%, transparent 42%, transparent 99%, rgba(17, 17, 17, .02) 99%, rgba(17, 17, 17, .02) 100%), linear-gradient(257deg, rgba(65, 65, 65, .02) 0%, rgba(65, 65, 65, .02) 11%, transparent 11%, transparent 92%, rgba(53, 53, 53, .02) 92%, rgba(53, 53, 53, .02) 100%), linear-gradient(191deg, rgba(5, 5, 5, .02) 0%, rgba(5, 5, 5, .02) 1%, transparent 1%, transparent 45%, rgba(19, 19, 19, .02) 45%, rgba(19, 19, 19, .02) 100%), linear-gradient(29deg, rgba(28, 28, 28, .02) 0%, rgba(28, 28, 28, .02) 33%, transparent 33%, transparent 40%, rgba(220, 220, 220, .02) 40%, rgba(220, 220, 220, .02) 100%), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255))";
+    next();
   },
 };
 </script>

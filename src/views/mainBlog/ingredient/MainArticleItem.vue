@@ -1,5 +1,4 @@
 <template>
-  <transition appear name="slideDown">
     <div class="articleItem">
       <div class="title">{{ articleData.title }}</div>
       <div class="bar">
@@ -32,7 +31,6 @@
         </div>
       </div>
     </div>
-  </transition>
 </template>
  
 <script>
@@ -194,4 +192,5 @@ export default {
     margin: 4px;
   }
 }
+
 </style>

@@ -25,11 +25,9 @@ export default {
     MainSideBar,
     MainArticleList,
   },
-  beforeCreate() {
+  beforeRouteEnter(to, from, next) {
     document.body.style.background = "#eee";
-  },
-  beforeDestroy() {
-    document.body.style.background = "";
+    next();
   },
 };
 </script>
