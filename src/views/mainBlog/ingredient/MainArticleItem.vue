@@ -1,36 +1,36 @@
 <template>
-    <div class="articleItem">
-      <div class="title">{{ articleData.title }}</div>
-      <div class="bar">
-        <span>
-          <i class="iconfont icon-fabu1"></i>
-          <span class="create-time time"
-            ><span class="describe">发布于</span
-            >{{ articleData.create_time.substring(0, 10) }}</span
-          >
-        </span>
-        <span>
-          <i class="iconfont icon-gengxin"></i
-          ><span class="updata-time time"
-            ><span class="describe">更改于</span
-            >{{ articleData.update_time.substring(0, 10) }}</span
-          >
-        </span>
-        <span>
-          <i class="iconfont icon-biaoqian"></i>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-        </span>
-      </div>
-      <div class="digest">
-        博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
-      </div>
-      <div class="read-more-wrapper">
-        <div class="read-more" @click="gotoDetail">
-          <span class="read-more-text">阅读全文 »</span>
-        </div>
+  <div class="articleItem">
+    <div class="title">{{ articleData.title }}</div>
+    <div class="bar">
+      <span>
+        <i class="iconfont icon-fabu1"></i>
+        <span class="create-time time"
+          ><span class="describe">发布于</span
+          >{{ articleData.create_time.substring(0, 10) }}</span
+        >
+      </span>
+      <span>
+        <i class="iconfont icon-gengxin"></i
+        ><span class="updata-time time"
+          ><span class="describe">更改于</span
+          >{{ articleData.update_time.substring(0, 10) }}</span
+        >
+      </span>
+      <span>
+        <i class="iconfont icon-biaoqian"></i>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+      </span>
+    </div>
+    <div class="digest">
+      博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
+    </div>
+    <div class="read-more-wrapper">
+      <div class="read-more" @click="gotoDetail">
+        <span class="read-more-text">阅读全文 »</span>
       </div>
     </div>
+  </div>
 </template>
  
 <script>
@@ -179,6 +179,9 @@ export default {
   .digest {
     font-size: 2rem;
   }
+  .bar {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 320px) {
@@ -192,5 +195,4 @@ export default {
     margin: 4px;
   }
 }
-
 </style>

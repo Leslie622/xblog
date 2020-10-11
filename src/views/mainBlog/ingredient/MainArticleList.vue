@@ -1,25 +1,29 @@
 <template>
-  <transition appear name="slideDown">
-    <div class="articleList">
-      <main-article-item
-        v-for="(item, index) in articleDatas"
-        :articleData="item"
-        :key="index"
-      />
-      <div class="Pagination" v-if="isPagination">
-        <el-pagination
-          background
-          layout="prev, pager, next"
-          :total="30"
-          class="articlePagination"
-          :current-page="pageNum"
-          @current-change="currentChange"
-          @next-click="currentChange"
-          @prev-click="currentChange"
-        ></el-pagination>
+  <div class="articleList-wrapper">
+    <transition appear name="slideDown">
+      <div class="articleList">
+        <main-article-item
+          v-for="(item, index) in articleDatas"
+          :articleData="item"
+          :key="index"
+        />
+        <transition appear name="slideDown">
+          <div class="Pagination" v-if="isPagination">
+            <el-pagination
+              background
+              layout="prev, pager, next"
+              :total="articleCount"
+              class="articlePagination"
+              :current-page="pageNum"
+              @current-change="currentChange"
+              @next-click="currentChange"
+              @prev-click="currentChange"
+            ></el-pagination>
+          </div>
+        </transition>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
  
 <script>
@@ -35,6 +39,7 @@ export default {
       isPagination: true,
       pageNum: 1,
       articleCategory: "",
+      articleCount: "",
     };
   },
   created() {
@@ -42,17 +47,26 @@ export default {
       method: "get",
       url: "/blog/category/query?user_id=8",
     }).then((res) => {
-      //有本地数据的情况下，获取本地，否则获取默认值
+      //分类 ——> 默认(本地) —— 切换
       if (window.localStorage.getItem("articleCategory")) {
         this.articleCategory = +window.localStorage.getItem("articleCategory");
       } else {
         this.articleCategory = res.data.data[0].id;
       }
+      //分页 ——> 默认(本地) —— 请求
       if (window.localStorage.getItem("pageNum")) {
         this.pageNum = +window.localStorage.getItem("pageNum");
         this.requestCateData(+window.localStorage.getItem("pageNum"));
       } else {
         this.requestCateData(this.pageNum);
+      }
+      //文章数量 ——> 分页器
+      let cate_data = res.data.data;
+      for (let i = 0; i < cate_data.length; i++) {
+        console.log(cate_data[i]);
+        if (cate_data[i].id == this.articleCategory) {
+          this.articleCount = cate_data[i].blog.count;
+        }
       }
     });
   },
@@ -81,8 +95,9 @@ export default {
 <style scoped>
 @import "../../../assets/css/element-ui/mainblog-pagination.css";
 
-.articleList {
+.articleList-wrapper {
   width: calc(100% - 260px);
+  overflow: hidden;
 }
 
 .Pagination {
@@ -97,7 +112,7 @@ export default {
 }
 
 @media (max-width: 990px) {
-  .articleList {
+  .articleList-wrapper {
     margin-top: 6px;
     width: 100%;
   }
@@ -110,16 +125,17 @@ export default {
 }
 
 .slideDown-enter-to {
-  animation: move 0.5s linear;
+  animation: move 0.6s linear;
 }
 
 @keyframes move {
   0% {
     opacity: 0;
-    transform: translate3d(0, -80px, 0);
+    transform: translateY(-40px);
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

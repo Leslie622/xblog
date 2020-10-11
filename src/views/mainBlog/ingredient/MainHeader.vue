@@ -71,8 +71,11 @@ export default {
   },
   methods: {
     switchCategory(res) {
+      console.log(res);
       //切换分类id
       window.localStorage.setItem("articleCategory", res);
+      //切换pageCount
+      window.localStorage.setItem("pageCount", res);
       //初始化pageNum
       window.localStorage.setItem("pageNum", 1);
       //刷新页面
