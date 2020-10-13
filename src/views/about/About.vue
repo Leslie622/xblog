@@ -4,7 +4,7 @@
       <div id="container"></div>
       <div class="frame">
         <div class="frame__deco">
-          <!-- <span class="frame__deco-inner">Leslie</span> -->
+          <span class="frame__deco-inner">Leslie</span>
         </div>
       </div>
       <div class="content">
