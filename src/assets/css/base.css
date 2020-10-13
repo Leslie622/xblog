@@ -64,9 +64,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
   background-color: rgb(211, 210, 210);
-  -webkit-border-radius: 15px;
 }
 
 /* ityped光标 */
