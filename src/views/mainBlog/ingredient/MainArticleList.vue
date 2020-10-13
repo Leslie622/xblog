@@ -1,28 +1,24 @@
 <template>
   <div class="articleList-wrapper">
-    <transition appear name="slideDown">
-      <div class="articleList">
-        <main-article-item
-          v-for="(item, index) in articleDatas"
-          :articleData="item"
-          :key="index"
-        />
-        <transition appear name="slideDown">
-          <div class="Pagination" v-if="isPagination">
-            <el-pagination
-              background
-              layout="prev, pager, next"
-              :total="articleCount"
-              class="articlePagination"
-              :current-page="pageNum"
-              @current-change="currentChange"
-              @next-click="currentChange"
-              @prev-click="currentChange"
-            ></el-pagination>
-          </div>
-        </transition>
+    <div class="articleList">
+      <main-article-item
+        v-for="(item, index) in articleDatas"
+        :articleData="item"
+        :key="index"
+      />
+      <div class="Pagination" v-if="isPagination">
+        <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="articleCount"
+          class="articlePagination"
+          :current-page="pageNum"
+          @current-change="currentChange"
+          @next-click="currentChange"
+          @prev-click="currentChange"
+        ></el-pagination>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
  
@@ -99,6 +95,11 @@ export default {
   overflow: hidden;
 }
 
+.articleList {
+  opacity: 0;
+  animation: move 0.4s 0.5s linear forwards;
+}
+
 .Pagination {
   display: flex;
   align-items: center;
@@ -123,18 +124,12 @@ export default {
   }
 }
 
-.slideDown-enter-to {
-  animation: move 0.6s linear;
-}
-
 @keyframes move {
   0% {
-    opacity: 0;
     transform: translateY(-40px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 </style>

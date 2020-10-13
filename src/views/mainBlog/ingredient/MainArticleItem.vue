@@ -147,7 +147,7 @@ export default {
   width: 0;
   height: 100%;
   background-color: #222;
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
 }
 
 .read-more-text {

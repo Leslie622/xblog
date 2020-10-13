@@ -1,25 +1,20 @@
 <template>
-  <transition
-    enter-active-class="animate__animated animate__fadeInLeft animate__fast"
-    appear
-  >
-    <div class="container">
-      <div class="toc-wrapper">
-        <div class="toc markdown-body"></div>
-      </div>
-      <div class="content">
-        <mavon-editor
-          v-model="blogContentHTML"
-          :toolbarsFlag="false"
-          :subfield="false"
-          :boxShadow="false"
-          defaultOpen="preview"
-          codeStyle="paraiso-light"
-          class="articleContent"
-        />
-      </div>
+  <div class="container">
+    <div class="toc-wrapper">
+      <div class="toc markdown-body"></div>
     </div>
-  </transition>
+    <div class="content">
+      <mavon-editor
+        v-model="blogContentHTML"
+        :toolbarsFlag="false"
+        :subfield="false"
+        :boxShadow="false"
+        defaultOpen="preview"
+        codeStyle="paraiso-light"
+        class="articleContent"
+      />
+    </div>
+  </div>
 </template>
  
 <script>
@@ -61,11 +56,13 @@ export default {
 @import "~assets/css/markdown/mavon-editor-index.css";
 
 .container {
+  opacity: 0;
   display: flex;
   justify-content: center;
   height: 100vh;
   font-family: 幼圆;
   overflow-y: scroll;
+  animation: move 0.4s 0.5s linear forwards;
 }
 
 .toc-wrapper {
@@ -104,6 +101,15 @@ export default {
   }
   .content {
     width: 100%;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
