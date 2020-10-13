@@ -39,7 +39,7 @@ export default {
       isPagination: true,
       pageNum: 1,
       articleCategory: "",
-      articleCount: "",
+      articleCount: 0,
     };
   },
   created() {
@@ -63,7 +63,6 @@ export default {
       //文章数量 ——> 分页器
       let cate_data = res.data.data;
       for (let i = 0; i < cate_data.length; i++) {
-        console.log(cate_data[i]);
         if (cate_data[i].id == this.articleCategory) {
           this.articleCount = cate_data[i].blog.count;
         }

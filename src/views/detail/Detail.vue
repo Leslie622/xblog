@@ -34,8 +34,6 @@ export default {
   },
   beforeCreate() {
     document.body.style.background = "#eee";
-    //创建之前完成时关闭导航
-    this.$bus.$emit("switchMenu", false);
     //获取数据
     request({
       method: "get",
