@@ -16,7 +16,7 @@ import MainSideBar from "./ingredient/MainSideBar";
 import MainArticleList from "./ingredient/MainArticleList";
 
 export default {
-  name: "",
+  name: "mainblog",
   data() {
     return {};
   },

@@ -1,6 +1,6 @@
 <template>
   <transition
-    enter-active-class="animate__animated animate__zoomIn animate__faster"
+    enter-active-class="animate__animated animate__fadeInLeft animate__fast"
     appear
   >
     <div class="container">
@@ -9,9 +9,12 @@
       </div>
       <div class="content">
         <mavon-editor
-          v-html="blogContentHTML"
-          codeStyle="paraiso-light"
+          v-model="blogContentHTML"
+          :toolbarsFlag="false"
+          :subfield="false"
           :boxShadow="false"
+          defaultOpen="preview"
+          codeStyle="paraiso-light"
           class="articleContent"
         />
       </div>
@@ -26,7 +29,7 @@ export default {
   name: "",
   data() {
     return {
-      blogContentHTML: null,
+      blogContentHTML: "",
     };
   },
   beforeCreate() {
@@ -45,10 +48,11 @@ export default {
     let ul = document.querySelectorAll("ul")[0];
     let h3 = document.querySelectorAll("h3")[0];
     let mulu = document.querySelector(".toc");
-    mulu.appendChild(h3);
-    mulu.appendChild(ul);
+    if (h3 && ul) {
+      mulu.appendChild(h3);
+      mulu.appendChild(ul);
+    }
   },
-
   beforeDestroy() {
     document.body.style.background = "";
   },
@@ -89,8 +93,6 @@ export default {
 
 .articleContent {
   z-index: 0;
-  margin-bottom: 10px;
-  padding: 0 1rem 80px;
   font-family: 幼圆;
   font-size: 18px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),

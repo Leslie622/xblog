@@ -1,15 +1,12 @@
 <template>
   <div id="Blog">
-    <keep-alive>
-      <router-view />
-    </keep-alive>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
   name: "Blog",
-
 };
 </script>
 
