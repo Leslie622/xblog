@@ -5,10 +5,11 @@
     </div>
     <div class="content">
       <mavon-editor
-        v-model="blogContentHTML"
+        :value="blogContent"
         :toolbarsFlag="false"
         :subfield="false"
         :boxShadow="false"
+        :editable="false"
         defaultOpen="preview"
         codeStyle="paraiso-light"
         class="articleContent"
@@ -24,7 +25,7 @@ export default {
   name: "",
   data() {
     return {
-      blogContentHTML: "",
+      blogContent: "",
     };
   },
   beforeCreate() {
@@ -34,7 +35,7 @@ export default {
       method: "get",
       url: `/blog/detail?id=${this.$route.query.id}`,
     }).then((res) => {
-      this.blogContentHTML = res.data.data.content;
+      this.blogContent = res.data.data.content;
     });
   },
   updated() {
@@ -62,7 +63,7 @@ export default {
   height: 100vh;
   font-family: 幼圆;
   overflow-y: scroll;
-  animation: move 0.4s 0.5s linear forwards;
+  animation: move 0.4s 0.4s linear forwards;
 }
 
 .toc-wrapper {
