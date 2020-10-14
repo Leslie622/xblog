@@ -9,12 +9,12 @@
       </div>
       <div class="content">
         <div class="content__item">
-          <button class="content__button">EnterHome</button>
+          <button class="content__button">Here we go!</button>
         </div>
         <div class="content__item content__item--details">
-          <h3 class="content__location">Bogotá</h3>
-          <h1 class="content__title">Amnesia</h1>
-          <p class="content__date">July 14 &mdash; 15</p>
+          <h3 class="content__location">WuHan</h3>
+          <h1 class="content__title">Leslie</h1>
+          <p class="content__date">June 22 &mdash; 2001</p>
         </div>
         <div
           class="content__item content__item--details content__item--columns"
