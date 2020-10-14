@@ -91,10 +91,10 @@ export default {
   top: 150px;
   left: 50%;
   z-index: 10;
-  margin-left: -4500px;
-  width: 9000px;
+  margin-left: -3000px;
+  width: 6000px;
   min-width: 1920px;
-  height: 9000px;
+  height: 6000px;
   border: 0 solid #b9b9b9;
   border-radius: 50%;
   box-shadow: 0 0 6px 1px rgba(231, 231, 231, 0.7);
