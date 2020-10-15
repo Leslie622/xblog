@@ -4,8 +4,6 @@ import router from "router/router";
 
 Vue.config.productionTip = false;
 
-
-
 //代码高亮
 import 'highlight.js/styles/googlecode.css'
 
