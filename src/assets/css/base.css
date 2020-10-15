@@ -72,7 +72,8 @@ html {
 .ityped-cursor {
   opacity: 1;
   font-size: 15px;
-  animation: blink .8s infinite;
+  color: white;
+  animation: blink .3s infinite;
 }
 
 @keyframes blink {

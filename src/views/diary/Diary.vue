@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="time-shaft">
-      <span class="title">LESLIE の DIARY</span>
+      <span class="title">LESLIE & DIARY</span>
       <div class="month-describe">
         <p
           v-for="(item, index) in circlePosition"
@@ -23,10 +23,7 @@
       </div>
       <span
         v-for="(item, index) in circlePosition"
-        @click="
-          chooseIndex = index;
-          aa();
-        "
+        @click="chooseIndex = index"
         class="month"
         >{{ item.value }}</span
       >
@@ -47,7 +44,6 @@ export default {
   name: "",
   data() {
     return {
-      a: true,
       chooseIndex: 9,
       circlePosition: [
         {
@@ -135,21 +131,16 @@ export default {
       month[i].style.left = this.textPosition[i].left + "%";
       month[i].style.transform = `rotate(${this.textPosition[i].rotate}deg)`;
     }
-    ityped(".ityped", ["我们迷茫的原因在于读书太少而想的太多"]);
+    ityped(".ityped", [
+      "人难免天生有自怜的情绪，唯有时刻保持清醒，才能看清真正的价值在哪里。",
+    ]);
   },
   beforeRouteEnter(to, from, next) {
     document.body.style.backgroundImage =
       "url(" + require("../../assets/img/bg/wallhaven-r2v5wj.jpg") + ")";
     next();
   },
-  methods: {
-    aa() {
-      this.a = false;
-      this.$nextTick(() => {
-        this.a = true;
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -204,7 +195,7 @@ body {
 
 .month {
   padding: 15px 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
 }
 
@@ -222,11 +213,12 @@ body {
   position: absolute;
   opacity: 0;
   width: 100%;
-  transition: all 1s;
+  font-size: 15px;
 }
 
 .month-describe .describeshow {
   opacity: 1;
+  transition: all 1.5s;
 }
 
 .ityped-content {

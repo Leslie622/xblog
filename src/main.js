@@ -4,10 +4,7 @@ import router from "router/router";
 
 Vue.config.productionTip = false;
 
-//引入markdowm编辑器
-import mavonEditor from 'mavon-editor'
-import 'mavon-editor/dist/css/index.css'
-Vue.use(mavonEditor)
+
 
 //代码高亮
 import 'highlight.js/styles/googlecode.css'

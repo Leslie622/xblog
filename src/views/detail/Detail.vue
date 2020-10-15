@@ -19,6 +19,7 @@
 </template>
  
 <script>
+import MavonEditor from "components/common/MavonEditor";
 import { request } from "network/request";
 
 export default {
@@ -49,6 +50,9 @@ export default {
   },
   beforeDestroy() {
     document.body.style.background = "";
+  },
+  components: {
+    MavonEditor,
   },
 };
 </script>
