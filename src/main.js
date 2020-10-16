@@ -28,8 +28,6 @@ Vue.prototype.$bus = new Vue()
 //网络请求
 Vue.prototype.$request = request;
 
-console.log(Vue.prototype);
-
 new Vue({
   render: h => h(Blog),
   router,

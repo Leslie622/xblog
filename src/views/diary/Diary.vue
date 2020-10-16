@@ -1,6 +1,6 @@
 <template>
   <transition appear enter-active-class="animate__animated animate__fadeIn">
-    <div>
+    <div class="diary">
       <time-line></time-line>
       <diary-list></diary-list>
     </div>
@@ -17,13 +17,11 @@ export default {
     TimeLine,
     DiaryList,
   },
-  beforeRouteEnter(to, from, next) {
-    document.body.style.backgroundImage =
-      "url(" + require("../../assets/img/bg/wallhaven-r2v5wj.jpg") + ")";
-    next();
-  },
 };
 </script>
 
 <style scoped>
+.diary {
+  background-image: url("~assets/img/bg/wallhaven-r2v5wj.jpg");
+}
 </style>

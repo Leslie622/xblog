@@ -25,14 +25,15 @@ export default {
     MainSideBar,
     MainArticleList,
   },
-  beforeRouteEnter(to, from, next) {
-    document.body.style.background = "#eee";
-    next();
-  },
 };
 </script>
 
 <style scoped>
+.mainBlog {
+  min-height: 100vh;
+  background-color: #eee;
+}
+
 .main {
   display: flex;
   justify-content: center;
