@@ -34,7 +34,7 @@
  
 <script>
 import MainSwitchIcon from "./MainSwitchIcon";
-import { request } from "network/request";
+
 export default {
   name: "",
   data() {
@@ -52,7 +52,7 @@ export default {
     };
   },
   created() {
-    request({
+    this.$request({
       method: "get",
       url: "/blog/category/query?user_id=8",
     }).then((res) => {

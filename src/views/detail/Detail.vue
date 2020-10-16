@@ -20,7 +20,6 @@
  
 <script>
 import MavonEditor from "components/common/MavonEditor";
-import { request } from "network/request";
 
 export default {
   name: "",
@@ -32,7 +31,7 @@ export default {
   beforeCreate() {
     document.body.style.background = "#eee";
     //获取数据
-    request({
+    this.$request({
       method: "get",
       url: `/blog/detail?id=${this.$route.query.id}`,
     }).then((res) => {

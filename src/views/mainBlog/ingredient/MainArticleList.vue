@@ -25,8 +25,6 @@
 <script>
 import MainArticleItem from "./MainArticleItem";
 
-import { request } from "network/request";
-
 export default {
   name: "",
   data() {
@@ -39,7 +37,7 @@ export default {
     };
   },
   created() {
-    request({
+    this.$request({
       method: "get",
       url: "/blog/category/query?user_id=8",
     }).then((res) => {
@@ -68,7 +66,7 @@ export default {
   methods: {
     //分页请求
     requestCateData(pageNum) {
-      request({
+      this.$request({
         method: "get",
         url: `/blog/query/withcategory?cate_id=${this.articleCategory}&pageNum=${pageNum}&pageSize=10`,
       }).then((res) => {
@@ -88,7 +86,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../../../assets/css/element-ui/mainblog-pagination.css";
+@import "~assets/css/element-ui/mainblog-pagination.css";
 
 .articleList-wrapper {
   width: calc(100% - 260px);

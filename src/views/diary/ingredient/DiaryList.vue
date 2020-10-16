@@ -1,6 +1,8 @@
 <template>
   <main class="main">
-    <div class="main-inner"></div>
+    <div class="main-inner">
+      <div class="card"></div>
+    </div>
   </main>
 </template>
  
@@ -21,5 +23,12 @@ export default {
   width: 70%;
   height: 1000px;
   background-color: tomato;
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border: 10px solid transparent;
 }
 </style>

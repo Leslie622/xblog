@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Blog from './Blog.vue';
 import router from "router/router";
+import { request } from "network/request"
 
 Vue.config.productionTip = false;
 
@@ -24,8 +25,13 @@ import store from "store/store"
 // 事件总线
 Vue.prototype.$bus = new Vue()
 
+//网络请求
+Vue.prototype.$request = request;
+
+console.log(Vue.prototype);
+
 new Vue({
   render: h => h(Blog),
   router,
-  store
+  store,
 }).$mount('#Blog')

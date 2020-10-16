@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="sidebar-inner">
       <div class="avatar">
-        <img src="../../../assets/img/avatar/cheung.jpg" alt="" />
+        <img src="~assets/img/avatar/cheung.jpg" alt="" />
       </div>
       <div class="description">何时眼前突兀见此屋</div>
       <div class="statistics">
