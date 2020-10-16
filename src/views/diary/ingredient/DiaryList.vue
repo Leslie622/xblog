@@ -7,9 +7,7 @@
 </template>
  
 <script>
-export default {
-  name: "",
-};
+export default {};
 </script>
 
 <style scoped>
@@ -28,7 +26,7 @@ export default {
 .card {
   width: 200px;
   height: 100px;
-  background-color: white;
   border: 10px solid transparent;
+  background-color: white;
 }
 </style>

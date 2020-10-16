@@ -44,7 +44,6 @@
 
 <script>
 export default {
-  name: "",
   created() {
     document.documentElement.className = "js";
     var supportsCssVars = function () {

@@ -33,7 +33,6 @@
 <script>
 import { ityped } from "common/ityped";
 export default {
-  name: "",
   data() {
     return {
       chooseIndex: 9,

@@ -5,9 +5,7 @@
 </template>
 
 <script>
-export default {
-  name: "Blog",
-};
+export default {};
 </script>
 
 <style>

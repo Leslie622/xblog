@@ -26,7 +26,6 @@
 import MainArticleItem from "./MainArticleItem";
 
 export default {
-  name: "",
   components: {
     MainArticleItem,
   },

@@ -36,7 +36,6 @@
 import MainSwitchIcon from "./MainSwitchIcon";
 
 export default {
-  name: "",
   components: {
     MainSwitchIcon,
   },

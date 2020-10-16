@@ -39,9 +39,7 @@
 </template>
  
 <script>
-export default {
-  name: "",
-};
+export default {};
 </script>
 
 <style scoped>

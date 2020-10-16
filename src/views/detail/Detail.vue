@@ -22,7 +22,6 @@
 import MavonEditor from "components/common/MavonEditor";
 
 export default {
-  name: "",
   components: {
     MavonEditor,
   },
@@ -49,9 +48,6 @@ export default {
       mulu.appendChild(ul);
     }
   },
-  beforeDestroy() {
-    document.body.style.background = "";
-  },
 };
 </script>
 
@@ -64,8 +60,8 @@ export default {
   justify-content: center;
   height: 100vh;
   font-family: 幼圆;
-  overflow-y: scroll;
   background-color: #eee;
+  overflow-y: scroll;
   animation: move 0.4s 0.4s linear forwards;
 }
 

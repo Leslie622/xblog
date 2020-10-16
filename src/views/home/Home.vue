@@ -17,7 +17,6 @@
  
 <script>
 export default {
-  name: "Home",
   data() {
     return {
       linkList: [
@@ -74,6 +73,7 @@ export default {
 }
 
 .linkItem:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
+
 </style>

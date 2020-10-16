@@ -12,7 +12,6 @@ import TimeLine from "./ingredient/TimeLine";
 import DiaryList from "./ingredient/DiaryList";
 
 export default {
-  name: "",
   components: {
     TimeLine,
     DiaryList,
@@ -22,6 +21,6 @@ export default {
 
 <style scoped>
 .diary {
-  background-image: url("~assets/img/bg/wallhaven-r2v5wj.jpg");
+  background-image: url("~assets/img/bg/diaryBG.jpg");
 }
 </style>

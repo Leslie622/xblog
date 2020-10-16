@@ -16,7 +16,6 @@ import MainSideBar from "./ingredient/MainSideBar";
 import MainArticleList from "./ingredient/MainArticleList";
 
 export default {
-  name: "mainblog",
   components: {
     MainHeader,
     MainSideBar,
