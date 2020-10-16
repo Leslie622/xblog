@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <time-line></time-line>
-    <diary-list></diary-list>
-  </div>
+  <transition appear enter-active-class="animate__animated animate__fadeIn">
+    <div>
+      <time-line></time-line>
+      <diary-list></diary-list>
+    </div>
+  </transition>
 </template>
  
 <script>

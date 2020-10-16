@@ -58,13 +58,13 @@ html {
 /* 滚动条 */
 
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 2px;
   height: 5px;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(211, 210, 210);
+  background-color: rgba(0, 0, 0);
 }
 
 /* ityped光标 */

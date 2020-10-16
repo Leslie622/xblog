@@ -1,13 +1,13 @@
 <template>
-   <main class="main">
-      <div class="main-inner"></div>
-    </main>
+  <main class="main">
+    <div class="main-inner"></div>
+  </main>
 </template>
  
 <script>
 export default {
-  name:'',
-}
+  name: "",
+};
 </script>
 
 <style scoped>
@@ -19,7 +19,7 @@ export default {
 
 .main-inner {
   width: 70%;
-  height: 500px;
+  height: 1000px;
   background-color: tomato;
 }
 </style>

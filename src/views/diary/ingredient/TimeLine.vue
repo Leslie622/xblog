@@ -133,8 +133,7 @@ export default {
 <style scoped>
 .time-shaft {
   position: relative;
-  width: 100vw;
-  min-width: 1920px;
+  min-width: 1918px;
   height: 310px;
   font-family: Arial;
   overflow: hidden;
