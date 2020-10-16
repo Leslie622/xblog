@@ -58,6 +58,7 @@ html {
 /* 滚动条 */
 
 ::-webkit-scrollbar {
+  display: none;
   width: 2px;
   height: 5px;
   border-radius: 15px;

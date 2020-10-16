@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="detail">
     <div class="toc-wrapper">
       <div class="toc markdown-body"></div>
     </div>
@@ -31,7 +31,7 @@ export default {
     };
   },
   beforeCreate() {
-    //获取数据
+    // 获取数据;
     this.$request({
       method: "get",
       url: `/blog/detail?id=${this.$route.query.id}`,
@@ -54,23 +54,23 @@ export default {
 <style scoped>
 @import "~assets/css/markdown/mavon-editor-index.css";
 
-.container {
-  opacity: 0;
+.detail {
   display: flex;
   justify-content: center;
   height: 100vh;
   font-family: 幼圆;
   background-color: #eee;
   overflow-y: scroll;
-  animation: move 0.4s 0.4s linear forwards;
 }
 
 .toc-wrapper {
   position: sticky;
+  opacity: 0;
   top: 10px;
   margin-right: 15px;
   overflow: hidden;
   overflow-y: scroll;
+  animation: move 0.4s 0.4s linear forwards;
 }
 
 .toc {
@@ -83,7 +83,9 @@ export default {
 }
 
 .content {
+  opacity: 0;
   width: 50%;
+  animation: move 0.4s 0.4s linear forwards;
 }
 
 .articleContent {
@@ -106,7 +108,7 @@ export default {
 
 @keyframes move {
   0% {
-    transform: translateY(-30px);
+    transform: translateY(-30px) translateZ(0);
   }
   100% {
     opacity: 1;
