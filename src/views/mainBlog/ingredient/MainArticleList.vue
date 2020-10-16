@@ -27,6 +27,9 @@ import MainArticleItem from "./MainArticleItem";
 
 export default {
   name: "",
+  components: {
+    MainArticleItem,
+  },
   data() {
     return {
       articleDatas: [],
@@ -78,9 +81,6 @@ export default {
       window.localStorage.setItem("pageNum", pageNum);
       location.reload();
     },
-  },
-  components: {
-    MainArticleItem,
   },
 };
 </script>

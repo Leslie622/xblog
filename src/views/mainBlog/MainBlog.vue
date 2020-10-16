@@ -17,13 +17,13 @@ import MainArticleList from "./ingredient/MainArticleList";
 
 export default {
   name: "mainblog",
-  data() {
-    return {};
-  },
   components: {
     MainHeader,
     MainSideBar,
     MainArticleList,
+  },
+  data() {
+    return {};
   },
 };
 </script>

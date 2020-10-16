@@ -23,13 +23,15 @@ import MavonEditor from "components/common/MavonEditor";
 
 export default {
   name: "",
+  components: {
+    MavonEditor,
+  },
   data() {
     return {
       blogContent: "",
     };
   },
   beforeCreate() {
-    document.body.style.background = "#eee";
     //获取数据
     this.$request({
       method: "get",
@@ -50,9 +52,6 @@ export default {
   beforeDestroy() {
     document.body.style.background = "";
   },
-  components: {
-    MavonEditor,
-  },
 };
 </script>
 
@@ -66,6 +65,7 @@ export default {
   height: 100vh;
   font-family: 幼圆;
   overflow-y: scroll;
+  background-color: #eee;
   animation: move 0.4s 0.4s linear forwards;
 }
 

@@ -37,6 +37,9 @@ import MainSwitchIcon from "./MainSwitchIcon";
 
 export default {
   name: "",
+  components: {
+    MainSwitchIcon,
+  },
   data() {
     return {
       linkList: [
@@ -104,9 +107,6 @@ export default {
         }
       });
     },
-  },
-  components: {
-    MainSwitchIcon,
   },
 };
 </script>
