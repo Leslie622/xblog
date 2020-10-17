@@ -17,6 +17,7 @@ export default {};
   justify-content: center;
 }
 
+
 .main-inner {
   width: 70%;
   height: 1000px;
