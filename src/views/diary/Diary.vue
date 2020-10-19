@@ -21,6 +21,7 @@ export default {
 
 <style scoped>
 .diary {
+  min-height: 100vh;
   background-image: url("~assets/img/bg/diaryBG.jpg");
 }
 </style>
