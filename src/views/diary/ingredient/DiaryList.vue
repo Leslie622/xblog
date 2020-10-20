@@ -1,71 +1,76 @@
 <template>
   <main class="main">
-    <div
-      class="main-inner"
-      :style="{
-        columns: count == 1 ? 1 : count == 2 ? 2 : 3,
-        width: count == 1 ? '600px' : count == 2 ? '1000px' : '1200px',
-      }"
+    <transition
+      appear
+      enter-active-class="animate__animated animate__swing animate__slow"
     >
-      <div class="card">
-        <img src="../../../assets/img/bg/diaryBG.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>
-          这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
-        </p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
+      <div
+        class="main-inner"
+        :style="{
+          columns: count == 1 ? 1 : count == 2 ? 2 : 3,
+          width: count == 1 ? '600px' : count == 2 ? '1000px' : '1200px',
+        }"
+      >
+        <div class="card">
+          <img src="../../../assets/img/bg/diaryBG.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>
+            这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
+          </p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../../assets/img/avatar/cheung.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../../assets/img/bg/wallhaven-eyjjrl.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../../assets/img/bg/wallhaven-mdx789.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../../assets/img/bg/wallhaven-oxkjgm.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../../assets/img/bg/wallhaven-wypo96.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../../assets/img/bg/wallhaven-xlx5mv.jpg" alt="" />
+          <h2 class="date">9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="../../../assets/img/avatar/cheung.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../../assets/img/bg/wallhaven-eyjjrl.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../../assets/img/bg/wallhaven-mdx789.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../../assets/img/bg/wallhaven-oxkjgm.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../../assets/img/bg/wallhaven-wypo96.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../../assets/img/bg/wallhaven-xlx5mv.jpg" alt="" />
-        <h2 class="date">9 / 20</h2>
-        <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-        <div class="read-more">
-          <span> <i class="el-icon-more"></i></span>
-        </div>
-      </div>
-    </div>
+    </transition>
   </main>
 </template>
  
