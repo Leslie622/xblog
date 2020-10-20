@@ -1,6 +1,6 @@
 <template>
   <div class="time-shaft">
-    <span class="title">LESLIE & DIARY</span>
+    <span class="title">LESLIE & DIARY </span>
     <div class="month-describe">
       <p
         v-for="(item, index) in circlePosition"

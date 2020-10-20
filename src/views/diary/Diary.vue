@@ -3,6 +3,7 @@
     <div class="diary">
       <time-line></time-line>
       <diary-list></diary-list>
+      <router-link to="/home" class="goHome">去首页</router-link>
     </div>
   </transition>
 </template>
@@ -23,5 +24,14 @@ export default {
 .diary {
   min-height: 100vh;
   background-image: url("~assets/img/bg/diaryBG.jpg");
+}
+
+.goHome {
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
 }
 </style>
