@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="sidebar-inner">
       <div class="avatar">
-        <img src="~assets/img/avatar/cheung.jpg" alt="" />
+        <img src="~assets/img/avatar/cheung.jpg"/>
       </div>
       <div class="description">何时眼前突兀见此屋</div>
       <div class="statistics">
@@ -25,13 +25,23 @@
       </div>
       <div class="links-of-author">
         <div>
-          <i class="iconfont icon-github1"></i>
+          <a href="https://github.com/Leslie622" target="_blank">
+            <i class="iconfont icon-github1"></i
+          ></a>
         </div>
         <div>
-          <i class="iconfont icon-weixin1"></i>
+          <el-popover placement="top-start" trigger="hover">
+            <img src="../../../assets/img/contact/weChatQR.png" class="weChatQR" />
+            <i class="iconfont icon-weixin1" slot="reference"></i>
+          </el-popover>
         </div>
         <div>
-          <i class="iconfont icon-qq1"></i>
+          <a
+            target="_blank"
+            href="http://wpa.qq.com/msgrd?v=3&uin=416317444&site=qq&menu=yes"
+          >
+            <i class="iconfont icon-qq1"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -114,14 +124,29 @@ export default {};
 
 .links-of-author {
   display: flex;
-  margin-top: 30px;
-  padding: 0 60px;
-  width: 100%;
+  box-sizing: content-box;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.links-of-author i {
   color: rgb(122, 122, 122);
 }
 
 .links-of-author div {
-  flex: 1;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  line-height: 30px;
+}
+
+.links-of-author div:hover {
+  background-color: #eee;
+}
+
+.weChatQR{
+  width: 150px;
 }
 
 @media (max-width: 990px) {

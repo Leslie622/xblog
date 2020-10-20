@@ -59,13 +59,13 @@ export default {
       let cate_data = res.data.data;
       for (let i = 0; i < cate_data.length; i++) {
         if (cate_data[i].id == this.articleCategory) {
-          this.articleCount = cate_data[i].blog.count;
+          this.articleCount = cate_data[i].blogs.length;
         }
       }
     });
   },
   methods: {
-    //分页请求
+    //分页请求 
     requestCateData(pageNum) {
       this.$request({
         method: "get",
@@ -93,7 +93,7 @@ export default {
 
 .articleList {
   opacity: 0;
-  animation: move .4s .5s linear forwards;
+  animation: move 0.4s 0.5s linear forwards;
 }
 
 .Pagination {
@@ -102,8 +102,8 @@ export default {
   justify-content: center;
   margin-bottom: 10px;
   padding: 30px 0;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
-  0 3px 1px -2px rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
 }
 
@@ -128,5 +128,4 @@ export default {
     opacity: 1;
   }
 }
-
 </style>
