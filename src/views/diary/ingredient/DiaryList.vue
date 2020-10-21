@@ -13,7 +13,7 @@
       >
         <div class="card">
           <img src="../../../assets/img/bg/diaryBG.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>
             这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
           </p>
@@ -23,7 +23,7 @@
         </div>
         <div class="card">
           <img src="../../../assets/img/avatar/cheung.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
           <div class="read-more">
             <span> <i class="el-icon-more"></i></span>
@@ -31,7 +31,7 @@
         </div>
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-eyjjrl.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
           <div class="read-more">
             <span> <i class="el-icon-more"></i></span>
@@ -39,7 +39,7 @@
         </div>
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-mdx789.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
           <div class="read-more">
             <span> <i class="el-icon-more"></i></span>
@@ -47,7 +47,7 @@
         </div>
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-oxkjgm.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
           <div class="read-more">
             <span> <i class="el-icon-more"></i></span>
@@ -55,7 +55,7 @@
         </div>
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-wypo96.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
           <div class="read-more">
             <span> <i class="el-icon-more"></i></span>
@@ -63,7 +63,7 @@
         </div>
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-xlx5mv.jpg" alt="" />
-          <h2 class="date">9 / 20</h2>
+          <h2 class="date">20 / 9 /20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
           <div class="read-more">
             <span> <i class="el-icon-more"></i></span>
