@@ -30,6 +30,10 @@
         <span class="read-more-text">阅读全文 »</span>
       </div>
     </div>
+    <img
+      src="https://mdw.oss-cn-hangzhou.aliyuncs.com/upload/2020/10/21/1603268289068.jpeg"
+      alt=""
+    />
   </div>
 </template>
  
@@ -63,9 +67,13 @@ export default {
   margin-bottom: 10px;
   width: 100%;
   font-family: 幼圆;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
-  0 3px 1px -2px rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
+}
+
+img {
+  width: 1200px;
 }
 
 .title {
@@ -139,7 +147,7 @@ export default {
   line-height: 2;
   color: #555;
   cursor: pointer;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 .read-more::after {
@@ -150,7 +158,7 @@ export default {
   width: 0;
   height: 100%;
   background-color: #222;
-  transition: all .1s linear;
+  transition: all 0.1s linear;
 }
 
 .read-more-text {
@@ -164,7 +172,7 @@ export default {
 
 .read-more:hover {
   border-color: #222;
-  box-shadow: 0 2px 4px 0 rgba(148, 148, 148, .7);
+  box-shadow: 0 2px 4px 0 rgba(148, 148, 148, 0.7);
   color: white;
   transform: translateY(-5px);
 }
@@ -198,5 +206,4 @@ export default {
     margin: 4px;
   }
 }
-
 </style>

@@ -24,6 +24,7 @@
  
 <script>
 import MainArticleItem from "./MainArticleItem";
+import { Message } from "element-ui";
 
 export default {
   components: {
@@ -42,6 +43,7 @@ export default {
       method: "get",
       url: "/blog/category/query?user_id=8",
     }).then((res) => {
+      console.log(res);
       //分类 ——> 默认(本地) —— 切换
       if (window.localStorage.getItem("articleCategory")) {
         this.articleCategory = +window.localStorage.getItem("articleCategory");
@@ -65,13 +67,23 @@ export default {
     });
   },
   methods: {
-    //分页请求 
+    //分页请求
     requestCateData(pageNum) {
       this.$request({
         method: "get",
         url: `/blog/query/withcategory?cate_id=${this.articleCategory}&pageNum=${pageNum}&pageSize=10`,
       }).then((res) => {
-        this.articleDatas = res.data.data;
+        if (res.data.data.length != 0) {
+          this.articleDatas = res.data.data;
+        } else {
+          Message({
+            message: "该分类暂无文章",
+            type: "warning",
+            duration: 2000,
+            center: true,
+            showClose: true,
+          });
+        }
       });
     },
     //更改页码
@@ -93,6 +105,8 @@ export default {
 
 .articleList {
   opacity: 0;
+  display: flex;
+  justify-content: center;
   animation: move 0.4s 0.5s linear forwards;
 }
 
@@ -105,6 +119,13 @@ export default {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
+}
+
+.noData {
+  position: absolute;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
 }
 
 @media (max-width: 990px) {
