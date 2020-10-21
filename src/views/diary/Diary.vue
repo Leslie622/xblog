@@ -4,7 +4,7 @@
       <time-line></time-line>
       <time-select></time-select>
       <diary-list></diary-list>
-      <!-- <router-link to="/home" class="goHome">去首页</router-link> -->
+      <router-link to="/home" class="goHome">去首页</router-link>
     </div>
   </transition>
 </template>
@@ -25,22 +25,28 @@ export default {
 
 <style scoped>
 .diary {
+  min-width: 1920px;
   min-height: 100vh;
   background-image: url("~assets/img/bg/diaryBG.jpg");
 }
 
 .goHome {
   position: fixed;
-  top: 40px;
-  left: 10px;
+  top: 70px;
+  right: 35px;
   margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
 }
-
 @media (max-width: 1024px) {
   .time-shaft {
     display: none;
+  }
+  .diary {
+    min-width: auto;
   }
 }
 
