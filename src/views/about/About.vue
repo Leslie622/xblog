@@ -12,7 +12,7 @@
           <button class="content__button">Here we go!</button>
         </div>
         <div class="content__item content__item--details">
-          <h3 class="content__location">WuHan</h3>
+          <h3 class="content__location">武汉 - WuHan</h3>
           <h1 class="content__title">Leslie</h1>
           <p class="content__date">June 22 &mdash; 2001</p>
         </div>
@@ -20,17 +20,9 @@
           class="content__item content__item--details content__item--columns"
         >
           <div class="content__inner">
-            <span>这是一段内容</span>
-            <div>
-              <span>这是一段内容</span>
-              <span>这是一段内容</span>
-              <span>这是一段内容</span>
-            </div>
-            <div>
-              <span>这是一段内容</span>
-              <span>这是一段内容</span>
-              <span>这是一段内容</span>
-            </div>
+            <p class="title">Contact</p>
+            <p><em>QQ </em>416317444</p>
+            <p><em>weChat </em>rebirth0622</p>
           </div>
           <div class="content__inner">
             <span>这是第二段内容</span>
@@ -285,5 +277,9 @@ export default {
 main {
   max-height: 100vh;
   overflow: hidden;
+}
+
+.title {
+  margin-bottom: 40px;
 }
 </style>

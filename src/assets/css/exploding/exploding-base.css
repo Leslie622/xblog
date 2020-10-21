@@ -161,7 +161,7 @@ canvas {
 .content__location {
 	margin: 0;
 	font-weight: 300;
-	color: var(--color-text-secondary);
+	color: white;
 }
 
 .content__title {
