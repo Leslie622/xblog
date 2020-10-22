@@ -38,9 +38,10 @@ export default {
   padding: 10px;
   border-radius: 5px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 @media (max-width: 1024px) {
   .time-shaft {
     display: none;

@@ -105,9 +105,7 @@ export default {
 
 .articleList {
   opacity: 0;
-  display: flex;
-  justify-content: center;
-  animation: move 0.4s 0.5s linear forwards;
+  animation: move .4s .5s linear forwards;
 }
 
 .Pagination {
@@ -116,13 +114,13 @@ export default {
   justify-content: center;
   margin-bottom: 10px;
   padding: 30px 0;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
+  0 3px 1px -2px rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .12);
   background-color: white;
 }
 
 .noData {
-  position: absolute;
+  position: absolute; 
   margin: 0 auto;
   width: 300px;
   height: 300px;
@@ -149,4 +147,5 @@ export default {
     opacity: 1;
   }
 }
+
 </style>

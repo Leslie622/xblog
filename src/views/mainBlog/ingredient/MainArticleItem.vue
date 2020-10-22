@@ -18,22 +18,20 @@
       </span>
       <span>
         <i class="iconfont icon-biaoqian"></i>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
+        <span class="tag" v-for="item in articleData.tag">{{ item }}</span>
       </span>
     </div>
     <div class="digest">
-      博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容
+      {{ articleData.abs }}
+    </div>
+    <div class="cover" v-if="articleData.cover">
+      <img :src="$imgPrefix + articleData.cover" />
     </div>
     <div class="read-more-wrapper">
       <div class="read-more" @click="gotoDetail">
         <span class="read-more-text">阅读全文 »</span>
       </div>
     </div>
-    <img
-      src="https://mdw.oss-cn-hangzhou.aliyuncs.com/upload/2020/10/21/1603268289068.jpeg"
-      alt=""
-    />
   </div>
 </template>
  
@@ -128,6 +126,14 @@ img {
   font-family: sans-serif;
   font-size: 1.4rem;
   transform: translate3d(0, 0, 0);
+}
+
+.cover {
+  width: 95%;
+}
+
+.cover img {
+  width: 100%;
 }
 
 .read-more-wrapper {
