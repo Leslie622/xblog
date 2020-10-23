@@ -48,6 +48,8 @@ export default {
   }
   .diary {
     min-width: auto;
+    background-image: url("~assets/img/bg/wallhaven-zm1kwy.jpg");
+    background-position: -240px 0;
   }
 }
 

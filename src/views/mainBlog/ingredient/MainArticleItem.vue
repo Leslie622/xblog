@@ -75,15 +75,15 @@ img {
 }
 
 .title {
-  margin: 40px 0;
-  padding: 0 50px;
-  font-size: 2rem;
+  margin: 2.5rem 0;
+  padding: 0 2rem;
+  font-size: 2.2rem;
 }
 
 .bar {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 100%;
   height: 15px;
   font-size: 1rem;
@@ -94,7 +94,7 @@ img {
 
 .bar > span:not(:first-child)::before {
   content: "|";
-  margin: 0 10px;
+  margin: 0 0.7rem;
   text-align: center;
 }
 
@@ -121,7 +121,7 @@ img {
 
 .digest {
   box-sizing: border-box;
-  padding: 30px;
+  padding: 2rem;
   width: 100%;
   font-family: sans-serif;
   font-size: 1.4rem;
@@ -141,7 +141,7 @@ img {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 120px;
+  height: 8rem;
 }
 
 .read-more {
@@ -187,17 +187,29 @@ img {
   .articleItem {
     width: calc(100vw - 6px);
   }
+  .digest {
+    font-family: 幼圆;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .describe {
     display: none;
   }
   .digest {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .bar {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .bar i {
+    margin: 0 2px;
+  }
+  .bar > span:not(:first-child)::before {
+    margin: 4px;
   }
 }
 

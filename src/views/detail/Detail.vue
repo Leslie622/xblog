@@ -70,7 +70,7 @@ export default {
   margin-right: 15px;
   overflow: hidden;
   overflow-y: scroll;
-  animation: move 0.4s 0.4s linear forwards;
+  animation: move .4s .4s linear forwards;
 }
 
 .toc {
@@ -78,22 +78,22 @@ export default {
   padding: 10px 10px 20px;
   width: 300px;
   border-right: 1px solid rgb(204, 204, 204);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
+  0 3px 1px -2px rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .content {
   opacity: 0;
   width: 50%;
-  animation: move 0.4s 0.4s linear forwards;
+  animation: move .4s .4s linear forwards;
 }
 
 .articleContent {
   z-index: 0;
   font-family: 幼圆;
   font-size: 18px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
+  0 3px 1px -2px rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .12);
   color: #333;
 }
 
@@ -114,4 +114,5 @@ export default {
     opacity: 1;
   }
 }
+
 </style>
