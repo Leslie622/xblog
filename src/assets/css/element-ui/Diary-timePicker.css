@@ -5,37 +5,37 @@
   background-color: transparent;
 }
 
-.time-picker .el-input--prefix .el-input__inner {
+.el-input--prefix .el-input__inner {
   padding: 0 40px;
 }
 
-.time-picker .el-input__inner:hover {
+.el-input__inner:hover {
   border-color: transparent;
 }
 
-.time-picker .el-picker-panel.el-date-picker.el-popper {
+.el-picker-panel.el-date-picker.el-popper {
   opacity: .9;
   margin: 12px 13px 0;
   width: calc(100% - 26px);
   font-family: 幼圆;
 }
 
-.time-picker .el-date-picker .el-picker-panel__content {
+.el-date-picker .el-picker-panel__content {
   width: 100%;
 }
 
-.time-picker .el-picker-panel__content {
+.el-picker-panel__content {
   margin: 0;
 }
 
-.time-picker .el-month-table td {
+.el-month-table td {
   padding: 0;
 }
 
-.time-picker .el-date-picker__header--bordered {
+.el-date-picker__header--bordered {
   padding-bottom: 6px;
 }
 
-.time-picker .el-date-picker__header {
+.el-date-picker__header {
   margin: 6px;
 }
