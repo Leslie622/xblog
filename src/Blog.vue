@@ -1,6 +1,6 @@
 <template>
   <div id="Blog">
-    <router-view />
+      <router-view />
   </div>
 </template>
 

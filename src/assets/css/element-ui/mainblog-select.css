@@ -43,7 +43,7 @@
   .el-select-dropdown {
     min-width: 98% !important;
   }
-  .articleSelect::before{
+  .articleSelect::before {
     right: 60px;
   }
 }

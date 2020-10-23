@@ -7,7 +7,7 @@
       </div>
       <div class="select-wrapper">
         <el-select
-          v-model="articleCategory"
+          :value="articleCategory"
           class="articleSelect"
           @change="switchCategory"
         >
