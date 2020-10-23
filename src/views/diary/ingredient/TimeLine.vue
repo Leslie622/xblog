@@ -35,7 +35,7 @@ import { ityped } from "common/ityped";
 export default {
   data() {
     return {
-      chooseIndex: 9,
+      chooseIndex: new Date().getMonth(),
       circlePosition: [
         {
           rotate: -15.1,
@@ -114,6 +114,7 @@ export default {
       ],
     };
   },
+
   mounted() {
     let month = document.querySelectorAll(".month");
     for (let i = 0; i < month.length; i++) {

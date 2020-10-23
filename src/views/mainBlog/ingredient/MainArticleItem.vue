@@ -42,9 +42,6 @@ export default {
       type: Object,
     },
   },
-  created() {
-    console.log(this.articleData);
-  },
   methods: {
     gotoDetail() {
       let Detail = this.$router.resolve({
