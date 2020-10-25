@@ -58,7 +58,7 @@ export default {
   display: flex;
   justify-content: center;
   height: 100vh;
-  font-family: 幼圆;
+  font-family: sans-serif;
   background-color: #eee;
   overflow-y: scroll;
 }
@@ -76,6 +76,7 @@ export default {
 .toc {
   box-sizing: border-box;
   padding: 10px 10px 20px;
+  font-family: Futura, "futura-pt", Arial, sans-serif;
   width: 300px;
   border-right: 1px solid rgb(204, 204, 204);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
@@ -90,8 +91,8 @@ export default {
 
 .articleContent {
   z-index: 0;
-  font-family: 幼圆;
-  font-size: 18px;
+  font-family: sans-serif;
+  font-size: 20px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12),
   0 3px 1px -2px rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .12);
   color: #333;

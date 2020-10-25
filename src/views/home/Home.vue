@@ -152,22 +152,18 @@ export default {
   text-align: center;
 }
 
-.black:active + .white {
-  animation: move 1s ease forwards;
-}
-
 .white {
   position: absolute;
   top: 0;
   width: 0;
   height: 100%;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   overflow: hidden;
   /* animation:  move 1s ease forwards; */
 }
 
 .movego {
-  animation: move 1s ease forwards;
+  animation: move 1s ease-in-out forwards;
 }
 
 @keyframes move {
@@ -175,7 +171,6 @@ export default {
     width: 0;
   }
   100% {
-    z-index: -1;
     width: 100%;
   }
 }
