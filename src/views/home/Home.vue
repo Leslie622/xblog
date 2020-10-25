@@ -1,7 +1,11 @@
 <template>
   <div class="wrapper">
+    <button class="a" @click="move">clickme</button>
     <div class="indexPage">
-      <div class="siteLogo">Leslie</div>
+      <div class="logo-content">
+        <div class="siteLogo black">Leslie</div>
+        <div class="siteLogo white">Leslie</div>
+      </div>
       <div class="homeMenu">
         <router-link
           v-for="(item, index) in this.linkList"
@@ -28,6 +32,12 @@ export default {
       ],
     };
   },
+  methods: {
+    move() {
+      let logoWhite = document.querySelector(".white");
+      logoWhite.classList.toggle("movego");
+    },
+  },
 };
 </script>
 
@@ -38,7 +48,88 @@ export default {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(339deg, rgba(47, 47, 47, .02) 0%, rgba(47, 47, 47, .02) 42%, transparent 42%, transparent 99%, rgba(17, 17, 17, .02) 99%, rgba(17, 17, 17, .02) 100%), linear-gradient(257deg, rgba(65, 65, 65, .02) 0%, rgba(65, 65, 65, .02) 11%, transparent 11%, transparent 92%, rgba(53, 53, 53, .02) 92%, rgba(53, 53, 53, .02) 100%), linear-gradient(191deg, rgba(5, 5, 5, .02) 0%, rgba(5, 5, 5, .02) 1%, transparent 1%, transparent 45%, rgba(19, 19, 19, .02) 45%, rgba(19, 19, 19, .02) 100%), linear-gradient(29deg, rgba(28, 28, 28, .02) 0%, rgba(28, 28, 28, .02) 33%, transparent 33%, transparent 40%, rgba(220, 220, 220, .02) 40%, rgba(220, 220, 220, .02) 100%), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  background-image: linear-gradient(
+      339deg,
+      rgba(47, 47, 47, 0.02) 0%,
+      rgba(47, 47, 47, 0.02) 42%,
+      transparent 42%,
+      transparent 99%,
+      rgba(17, 17, 17, 0.02) 99%,
+      rgba(17, 17, 17, 0.02) 100%
+    ),
+    linear-gradient(
+      257deg,
+      rgba(65, 65, 65, 0.02) 0%,
+      rgba(65, 65, 65, 0.02) 11%,
+      transparent 11%,
+      transparent 92%,
+      rgba(53, 53, 53, 0.02) 92%,
+      rgba(53, 53, 53, 0.02) 100%
+    ),
+    linear-gradient(
+      191deg,
+      rgba(5, 5, 5, 0.02) 0%,
+      rgba(5, 5, 5, 0.02) 1%,
+      transparent 1%,
+      transparent 45%,
+      rgba(19, 19, 19, 0.02) 45%,
+      rgba(19, 19, 19, 0.02) 100%
+    ),
+    linear-gradient(
+      29deg,
+      rgba(28, 28, 28, 0.02) 0%,
+      rgba(28, 28, 28, 0.02) 33%,
+      transparent 33%,
+      transparent 40%,
+      rgba(220, 220, 220, 0.02) 40%,
+      rgba(220, 220, 220, 0.02) 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  background-image: linear-gradient(
+      12deg,
+      rgba(193, 193, 193, 0.08) 0%,
+      rgba(193, 193, 193, 0.08) 2%,
+      rgba(129, 129, 129, 0.08) 2%,
+      rgba(129, 129, 129, 0.08) 27%,
+      rgba(185, 185, 185, 0.08) 27%,
+      rgba(185, 185, 185, 0.08) 66%,
+      rgba(83, 83, 83, 0.08) 66%,
+      rgba(83, 83, 83, 0.08) 100%
+    ),
+    linear-gradient(
+      321deg,
+      rgba(240, 240, 240, 0.08) 0%,
+      rgba(240, 240, 240, 0.08) 13%,
+      rgba(231, 231, 231, 0.08) 13%,
+      rgba(231, 231, 231, 0.08) 34%,
+      rgba(139, 139, 139, 0.08) 34%,
+      rgba(139, 139, 139, 0.08) 71%,
+      rgba(112, 112, 112, 0.08) 71%,
+      rgba(112, 112, 112, 0.08) 100%
+    ),
+    linear-gradient(
+      236deg,
+      rgba(189, 189, 189, 0.08) 0%,
+      rgba(189, 189, 189, 0.08) 47%,
+      rgba(138, 138, 138, 0.08) 47%,
+      rgba(138, 138, 138, 0.08) 58%,
+      rgba(108, 108, 108, 0.08) 58%,
+      rgba(108, 108, 108, 0.08) 85%,
+      rgba(143, 143, 143, 0.08) 85%,
+      rgba(143, 143, 143, 0.08) 100%
+    ),
+    linear-gradient(
+      96deg,
+      rgba(53, 53, 53, 0.08) 0%,
+      rgba(53, 53, 53, 0.08) 53%,
+      rgba(44, 44, 44, 0.08) 53%,
+      rgba(44, 44, 44, 0.08) 82%,
+      rgba(77, 77, 77, 0.08) 82%,
+      rgba(77, 77, 77, 0.08) 98%,
+      rgba(8, 8, 8, 0.08) 98%,
+      rgba(8, 8, 8, 0.08) 100%
+    ),
+    linear-gradient(334deg, rgb(5, 5, 5), rgb(5, 5, 5));
 }
 
 .indexPage {
@@ -47,12 +138,46 @@ export default {
   font-family: Arial;
 }
 
-.siteLogo {
+.a {
+  position: absolute;
+  top: 0;
+}
+
+.logo-content {
+  position: relative;
   flex: 1;
   margin: 0 auto;
   font-family: Monoton-Regular;
   font-size: 7rem;
   text-align: center;
+}
+
+.black:active + .white {
+  animation: move 1s ease forwards;
+}
+
+.white {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+  /* animation:  move 1s ease forwards; */
+}
+
+.movego {
+  animation: move 1s ease forwards;
+}
+
+@keyframes move {
+  0% {
+    width: 0;
+  }
+  100% {
+    z-index: -1;
+    width: 100%;
+  }
 }
 
 .homeMenu {
@@ -73,7 +198,6 @@ export default {
 }
 
 .linkItem:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 </style>
