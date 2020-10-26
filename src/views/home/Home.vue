@@ -159,7 +159,6 @@ export default {
   height: 100%;
   color: rgba(255, 255, 255, 0.9);
   overflow: hidden;
-  /* animation:  move 1s ease forwards; */
 }
 
 .movego {
