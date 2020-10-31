@@ -2,15 +2,18 @@
   <div id="Blog" :class="[theme == 2 ? 'light' : 'dark']">
     <router-view />
     <theme-switch-btn v-if="$route.path == '/Home'" />
+    <back-top></back-top>
   </div>
 </template>
 
 <script>
-import themeSwitchBtn from "./components/content/themeSwitchBtn";
+import ThemeSwitchBtn from "./components/content/theme-switch-btn/ThemeSwitchBtn";
+import BackTop from "./components/common/backTop/BackTop";
 
 export default {
   components: {
-    themeSwitchBtn,
+    ThemeSwitchBtn,
+    BackTop,
   },
   data() {
     return {
