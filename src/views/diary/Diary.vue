@@ -4,7 +4,7 @@
       <time-line></time-line>
       <time-select></time-select>
       <diary-list></diary-list>
-      <router-link to="/home" class="goHome">去首页</router-link>
+      <router-link to="/Home" class="goHome">去首页</router-link>
     </div>
   </transition>
 </template>

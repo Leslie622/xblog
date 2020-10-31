@@ -1,10 +1,9 @@
 <template>
   <div class="wrapper">
-    <button class="a" @click="move">clickme</button>
     <div class="indexPage">
       <div class="logo-content">
-        <div class="siteLogo black">Leslie</div>
-        <div class="siteLogo white">Leslie</div>
+        <div class="siteLogo blackLogo">Leslie</div>
+        <div class="siteLogo whiteLogo">Leslie</div>
       </div>
       <div class="homeMenu">
         <router-link
@@ -30,61 +29,14 @@ export default {
         { path: "/About", value: "ABOUT" },
         { path: "/Friends", value: "FRIENDS" },
       ],
+      theme: 1,
     };
-  },
-  methods: {
-    move() {
-      let logoWhite = document.querySelector(".white");
-      logoWhite.classList.toggle("movego");
-    },
   },
 };
 </script>
 
 <style scoped>
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(
-      339deg,
-      rgba(47, 47, 47, 0.02) 0%,
-      rgba(47, 47, 47, 0.02) 42%,
-      transparent 42%,
-      transparent 99%,
-      rgba(17, 17, 17, 0.02) 99%,
-      rgba(17, 17, 17, 0.02) 100%
-    ),
-    linear-gradient(
-      257deg,
-      rgba(65, 65, 65, 0.02) 0%,
-      rgba(65, 65, 65, 0.02) 11%,
-      transparent 11%,
-      transparent 92%,
-      rgba(53, 53, 53, 0.02) 92%,
-      rgba(53, 53, 53, 0.02) 100%
-    ),
-    linear-gradient(
-      191deg,
-      rgba(5, 5, 5, 0.02) 0%,
-      rgba(5, 5, 5, 0.02) 1%,
-      transparent 1%,
-      transparent 45%,
-      rgba(19, 19, 19, 0.02) 45%,
-      rgba(19, 19, 19, 0.02) 100%
-    ),
-    linear-gradient(
-      29deg,
-      rgba(28, 28, 28, 0.02) 0%,
-      rgba(28, 28, 28, 0.02) 33%,
-      transparent 33%,
-      transparent 40%,
-      rgba(220, 220, 220, 0.02) 40%,
-      rgba(220, 220, 220, 0.02) 100%
-    ),
-    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+.dark .wrapper {
   background-image: linear-gradient(
       12deg,
       rgba(193, 193, 193, 0.08) 0%,
@@ -132,15 +84,56 @@ export default {
     linear-gradient(334deg, rgb(5, 5, 5), rgb(5, 5, 5));
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 2s;
+  background-image: linear-gradient(
+      339deg,
+      rgba(47, 47, 47, 0.02) 0%,
+      rgba(47, 47, 47, 0.02) 42%,
+      transparent 42%,
+      transparent 99%,
+      rgba(17, 17, 17, 0.02) 99%,
+      rgba(17, 17, 17, 0.02) 100%
+    ),
+    linear-gradient(
+      257deg,
+      rgba(65, 65, 65, 0.02) 0%,
+      rgba(65, 65, 65, 0.02) 11%,
+      transparent 11%,
+      transparent 92%,
+      rgba(53, 53, 53, 0.02) 92%,
+      rgba(53, 53, 53, 0.02) 100%
+    ),
+    linear-gradient(
+      191deg,
+      rgba(5, 5, 5, 0.02) 0%,
+      rgba(5, 5, 5, 0.02) 1%,
+      transparent 1%,
+      transparent 45%,
+      rgba(19, 19, 19, 0.02) 45%,
+      rgba(19, 19, 19, 0.02) 100%
+    ),
+    linear-gradient(
+      29deg,
+      rgba(28, 28, 28, 0.02) 0%,
+      rgba(28, 28, 28, 0.02) 33%,
+      transparent 33%,
+      transparent 40%,
+      rgba(220, 220, 220, 0.02) 40%,
+      rgba(220, 220, 220, 0.02) 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
 .indexPage {
   display: flex;
   flex-direction: column;
   font-family: Arial;
-}
-
-.a {
-  position: absolute;
-  top: 0;
 }
 
 .logo-content {
@@ -152,26 +145,22 @@ export default {
   text-align: center;
 }
 
-.white {
+.whiteLogo {
   position: absolute;
   top: 0;
-  width: 0;
-  height: 100%;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
   overflow: hidden;
 }
 
-.movego {
-  animation: move 1s ease-in-out forwards;
+.dark .whiteLogo,
+.light .blackLogo {
+  animation: logoAnimate 1s forwards;
 }
 
-@keyframes move {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
+.blackLogo {
+  position: relative;
+  color: black;
+  overflow: hidden;
 }
 
 .homeMenu {
@@ -193,5 +182,16 @@ export default {
 
 .linkItem:hover {
   opacity: 0.5;
+}
+
+@keyframes logoAnimate {
+  0% {
+    z-index: 1;
+    width: 0;
+  }
+  100% {
+    z-index: 1;
+    width: 100%;
+  }
 }
 </style>
