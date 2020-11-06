@@ -16,9 +16,9 @@
           >{{ articleData.update_time.substring(0, 10) }}</span
         >
       </span>
-      <span>
-        <i class="iconfont icon-biaoqian"></i>
-        <span class="tag" v-for="item in articleData.tag">{{ item }}</span>
+      <span v-if="articleData.tag.length">
+        <i class="iconfont icon-biaoqian" ></i>
+        <span class="tag" v-for="item in articleData.tag" >{{ item }}</span>
       </span>
     </div>
     <div class="digest">
