@@ -17,8 +17,8 @@
         >
       </span>
       <span v-if="articleData.tag.length">
-        <i class="iconfont icon-biaoqian" ></i>
-        <span class="tag" v-for="item in articleData.tag" >{{ item }}</span>
+        <i class="iconfont icon-biaoqian"></i>
+        <span class="tag" v-for="item in articleData.tag">{{ item }}</span>
       </span>
     </div>
     <div class="digest">

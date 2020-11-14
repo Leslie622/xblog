@@ -44,7 +44,7 @@ export default {
       linkList: [
         { path: "/", value: "主页", iconClass: "iconfont icon-icon" },
         { path: "/Diary", value: "日记", iconClass: "el-icon-notebook-2" },
-        { path: "/Mark", value: "留言", iconClass: "el-icon-edit-outline" },
+        { path: "/Filing", value: "归档", iconClass: "el-icon-edit-outline" },
         { path: "/About", value: "关于", iconClass: "iconfont icon-guanyu" },
         { path: "/Friends", value: "友链", iconClass: "iconfont icon-pengyou" },
         { path: "/Friends", value: "搜索", iconClass: "el-icon-search" },

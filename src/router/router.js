@@ -4,7 +4,7 @@ Vue.use(VueRouter)
 
 const Home = () => import("views/home/Home.vue")
 const Diary = () => import("views/diary/Diary.vue")
-const Mark = () => import("views/mark/Mark.vue")
+const Filing = () => import("views/filing/Filing.vue")
 const MainBlog = () => import("views/mainBlog/MainBlog.vue")
 const About = () => import("views/about/About.vue")
 const Friends = () => import("views/friends/Friends.vue")
@@ -35,9 +35,9 @@ const routes = [
     meta: { title: 'Diary | Leslie' }
   },
   {
-    path: "/Mark",
-    component: Mark,
-    meta: { title: 'Mark | Leslie' }
+    path: "/Filing",
+    component: Filing,
+    meta: { title: 'Filing | Leslie' }
   },
   {
     path: "/About",

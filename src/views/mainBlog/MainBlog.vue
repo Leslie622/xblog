@@ -4,7 +4,9 @@
     <main class="main">
       <div class="main-inner">
         <main-side-bar />
+        <slot>
         <main-article-list></main-article-list>
+        </slot>
       </div>
     </main>
   </div>

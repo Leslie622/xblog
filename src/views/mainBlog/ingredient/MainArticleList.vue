@@ -1,23 +1,25 @@
 <template>
   <div class="articleList-wrapper">
     <div class="articleList">
-      <main-article-item
-        v-for="(item, index) in articleDatas"
-        :articleData="item"
-        :key="index"
-      />
-      <div class="Pagination" v-if="articleCount > 10">
-        <el-pagination
-          background
-          layout="prev, pager, next"
-          :total="articleCount"
-          class="articlePagination"
-          :current-page="pageNum"
-          @current-change="currentChange"
-          @next-click="currentChange"
-          @prev-click="currentChange"
-        ></el-pagination>
-      </div>
+      <slot>
+        <main-article-item
+          v-for="(item, index) in articleDatas"
+          :articleData="item"
+          :key="index"
+        />
+        <div class="Pagination" v-if="articleCount > 10">
+          <el-pagination
+            background
+            layout="prev, pager, next"
+            :total="articleCount"
+            class="articlePagination"
+            :current-page="pageNum"
+            @current-change="currentChange"
+            @next-click="currentChange"
+            @prev-click="currentChange"
+          ></el-pagination>
+        </div>
+      </slot>
     </div>
   </div>
 </template>
@@ -118,17 +120,10 @@ export default {
   background-color: white;
 }
 
-.noData {
-  position: absolute;
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
-}
-
 @media (max-width: 990px) {
   .articleList-wrapper {
     margin-top: 6px;
-    width: 100%;
+    width: 100vw;
   }
 }
 

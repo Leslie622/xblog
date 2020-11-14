@@ -25,9 +25,9 @@ export default {
       linkList: [
         { path: "/MainBlog", value: "BLOG" },
         { path: "/Diary", value: "DIARY" },
-        { path: "/Mark", value: "MARK" },
-        { path: "/About", value: "ABOUT" },
+        { path: "/Filing", value: "FILING" },
         { path: "/Friends", value: "FRIENDS" },
+        { path: "/About", value: "ABOUT" },
       ],
       theme: 1,
     };
@@ -90,7 +90,6 @@ export default {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  transition: all 2s;
   background-image: linear-gradient(
       339deg,
       rgba(47, 47, 47, 0.02) 0%,
