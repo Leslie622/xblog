@@ -31,7 +31,12 @@
 </template>
  
 <script>
-import { ityped } from "common/ityped";
+// if (!!window.ActiveXObject || "ActiveXObject" in window) {
+//   console.log("yes");
+// } else {
+  // 
+// }
+
 export default {
   data() {
     return {
@@ -123,9 +128,9 @@ export default {
       month[i].style.left = this.textPosition[i].left + "%";
       month[i].style.transform = `rotate(${this.textPosition[i].rotate}deg)`;
     }
-    ityped(".ityped", [
-      "人难免天生有自怜的情绪，唯有时刻保持清醒，才能看清真正的价值在哪里。",
-    ]);
+      // ityped(".ityped", [
+      //   "人难免天生有自怜的情绪，唯有时刻保持清醒，才能看清真正的价值在哪里。",
+      // ]);
   },
 };
 </script>

@@ -1,11 +1,16 @@
 import axios from "axios"
 import { Message } from 'element-ui'
 
+// 网络请求进度条
+import Nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 function message(str) {
   Message({
     message: str,
     type: 'error',
     duration: 3000,
+    customClass:"eleMessage"
   });
 }
 
@@ -17,6 +22,7 @@ export function request(config) {
 
   //请求拦截
   instance.interceptors.request.use(config => {
+    Nprogress.start()
     return config
   }), err => {
     console.log(config);
@@ -29,6 +35,7 @@ export function request(config) {
 
   //响应拦截
   instance.interceptors.response.use(response => {
+    Nprogress.done()
     return response
   }, error => {
     if (error && error.response) {

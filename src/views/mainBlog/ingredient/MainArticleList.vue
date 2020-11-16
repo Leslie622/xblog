@@ -80,9 +80,10 @@ export default {
           Message({
             message: "该分类暂无文章",
             type: "warning",
-            duration: 2000,
+            duration: 3000,
             center: true,
             showClose: true,
+            customClass:"eleMessage"
           });
         }
       });

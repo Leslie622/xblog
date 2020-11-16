@@ -5,7 +5,7 @@
       <div class="main-inner">
         <main-side-bar />
         <slot>
-        <main-article-list></main-article-list>
+          <main-article-list></main-article-list>
         </slot>
       </div>
     </main>
@@ -25,9 +25,6 @@ export default {
   },
   data() {
     return {};
-  },
-  mounted() {
-    console.log(this.$route.path);
   },
 };
 </script>

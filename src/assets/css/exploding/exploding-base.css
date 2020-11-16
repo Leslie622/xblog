@@ -5,7 +5,6 @@
 body {
 	font-family: Futura, "futura-pt", Arial, sans-serif;
 	color: var(--color-text);
-	/* --color-text: #e0e0e0; */
 	--color-text-secondary: #5e6262;
 	--color-bg: #151616;
 	--color-link: #5e6262;
@@ -190,7 +189,7 @@ canvas {
 .content__date {
 	margin: 1rem 0 0 0;
 	font-weight: 700;
-	font-size: 3rem;
+	font-size: 1rem;
 	color: var(--color-date);
 }
 
@@ -202,10 +201,14 @@ canvas {
 
 .content__inner {
 	display: block;
-	margin: 2rem 0 0 0;
+	margin-bottom: 7rem;
 	padding: 0;
 	text-align: left;
 	list-style: none;
+}
+
+.content__inner>p {
+	margin: 20px 0;
 }
 
 .content__inner-item {
@@ -337,7 +340,7 @@ canvas {
 		height: 100vh;
 	}
 	.content__inner {
-		margin: 0;
+		margin: 40px;
 	}
 	.content__item--columns {
 		display: flex;

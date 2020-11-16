@@ -2,16 +2,16 @@
   <div class="sidebar">
     <div class="sidebar-inner">
       <div class="avatar">
-        <img src="~assets/img/avatar/cheung.jpg"/>
+        <img src="~assets/img/avatar/cheung.jpg" />
       </div>
       <div class="description">何时眼前突兀见此屋</div>
       <div class="statistics">
         <div class="article">
-          <span>888</span>
+          <span>{{ articleCounts }}</span>
           <p>文章</p>
         </div>
         <div class="visit">
-          <span>666</span>
+          <span>{{ view }}</span>
           <p>观看</p>
         </div>
         <div class="diary">
@@ -31,7 +31,10 @@
         </div>
         <div>
           <el-popover placement="top-start" trigger="hover">
-            <img src="../../../assets/img/contact/weChatQR.png" class="weChatQR" />
+            <img
+              src="../../../assets/img/contact/weChatQR.png"
+              class="weChatQR"
+            />
             <i class="iconfont icon-weixin1" slot="reference"></i>
           </el-popover>
         </div>
@@ -49,7 +52,38 @@
 </template>
  
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      articleList: [],
+      articleCounts: 0,
+      view: 0,
+    };
+  },
+  created() {
+    //请求所有文章
+    this.$request({
+      method: "get",
+      url: "blog/category/query?user_id=8",
+    }).then((res) => {
+      res.data.data.forEach((cate) => {
+        this.articleCounts += cate.blogs.length;
+        this.articleList.push(cate.id);
+      });
+      for (let i = 0; i < this.articleList.length; i++) {
+        this.$request({
+          method: "get",
+          url: `blog/query/withcategory?cate_id=${this.articleList[i]}&pageNum=1&pageSize=1000`,
+        }).then((res) => {
+          console.log(res.data.data);
+          res.data.data.forEach((article) => {
+            this.view += article.view;
+          });
+        });
+      }
+    });
+  },
+};
 </script>
 
 <style scoped>
@@ -145,7 +179,7 @@ export default {};
   background-color: #eee;
 }
 
-.weChatQR{
+.weChatQR {
   width: 150px;
 }
 

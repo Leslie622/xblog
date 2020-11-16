@@ -1,14 +1,6 @@
 @import "./normalize/normalize.css";
 @import "../css/iconfont/iconfont.css";
-@font-face {
-  font-family: "ios7";
-  src: url(../font/ios7.ttf);
-}
-
-@font-face {
-  font-family: "幼圆";
-  src: url(../font/youyuan.TTF);
-}
+@import "../css/element-ui/message-box.css";
 
 @font-face {
   font-family: "Monoton-Regular";
@@ -23,6 +15,11 @@
 @font-face {
   font-family: "YatraOne-Regular";
   src: url(../font/YatraOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "NotoSerifSC";
+  src: url(../font/NotoSerifSC.otf);
 }
 
 html {

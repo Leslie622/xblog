@@ -14,18 +14,26 @@
         <div class="content__item content__item--details">
           <h3 class="content__location">武汉 - WuHan</h3>
           <h1 class="content__title">Leslie</h1>
-          <p class="content__date">June 22 &mdash; 2001</p>
+          <p class="content__date">光谷职业学院第一届网页设计技能赛参赛作品</p>
         </div>
         <div
           class="content__item content__item--details content__item--columns"
         >
           <div class="content__inner">
-            <p class="title">Contact</p>
-            <p><em>QQ </em>416317444</p>
-            <p><em>weChat </em>rebirth0622</p>
+            <p class="name">姓名：李逸帆</p>
+            <p class="academy">学院：互联网+</p>
+            <p class="class">班级：软件4班</p>
+            <p class="division">负责模块：前端，网页</p>
+            <p><em>QQ： </em>416317444</p>
+            <p><em>weChat： </em>rebirth0622</p>
           </div>
           <div class="content__inner">
-            <span>这是第二段内容</span>
+            <p class="name">姓名：李儒龙</p>
+            <p class="academy">学院：互联网+</p>
+            <p class="class">班级：软件4班</p>
+            <p class="division">负责模块：PPT撰写演讲</p>
+            <p><em>QQ： </em>416317444</p>
+            <p><em>weChat： </em>rebirth0622</p>
           </div>
         </div>
       </div>
@@ -72,17 +80,14 @@ export default {
     ];
     const enterCtrl = document.querySelector(".content__button");
 
-    let animation = new explosion.default(
-      "container", // id of DOM el
-      {
-        surface: "5E6262",
-        inside: "ef572d",
-        background: "151616",
-        onLoad: () => {
-          document.body.classList.remove("loading");
-        },
-      }
-    );
+    let animation = new explosion.default("container", {
+      surface: "5E6262",
+      inside: "ef572d",
+      background: "151616",
+      onLoad: () => {
+        document.body.classList.remove("loading");
+      },
+    });
 
     let targetMouseX = 0,
       mouseX = 0,
@@ -281,5 +286,10 @@ main {
 
 .title {
   margin-bottom: 40px;
+}
+
+.team {
+  position: absolute;
+  top: 0;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <transition appear enter-active-class="animate__animated animate__fadeIn">
     <div class="diary">
-      <time-line></time-line>
+      <time-line></time-line> 
       <time-select></time-select>
-      <diary-list></diary-list>
+      <diary-list></diary-list> 
       <router-link to="/Home" class="goHome">去首页</router-link>
     </div>
   </transition>

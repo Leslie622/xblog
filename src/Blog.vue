@@ -32,7 +32,7 @@ export default {
   methods: {
     initTheme() {
       if (!window.localStorage.getItem("theme")) {
-        window.localStorage.setItem("theme", 1);
+        window.localStorage.setItem("theme", 2);
       }
     },
   },

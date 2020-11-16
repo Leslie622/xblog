@@ -81,8 +81,6 @@ export default {
       count: 3,
     };
   },
-  mounted() {},
-  methods: {},
 };
 </script>
 
