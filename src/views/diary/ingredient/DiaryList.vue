@@ -10,18 +10,18 @@
       >
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-8o77w2.jpg" alt="" />
-          <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <h2 class="date">20 / 11 / 1</h2>
+          <p>心之所向，素履以往，生如逆旅，一苇以航。</p>
+          <p>——七堇年</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
         <div class="card">
           <img src="../../../assets/img/bg/diaryBG.jpg" alt="" />
-          <h2 class="date">20 / 9 / 20</h2>
-          <p>
-            这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
-          </p>
+          <h2 class="date">20 / 11 / 2</h2>
+          <p>使人疲惫的不是远方的高山，而是鞋子里的一粒沙子。</p>
+          <p>——伏尔泰《格言》</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
@@ -29,8 +29,9 @@
 
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-eyjjrl.jpg" alt="" />
-          <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <h2 class="date">20 / 11 / 3</h2>
+          <p>生活安逸时会做出绝望的诗，生活窘迫时会不断写出生的喜悦。</p>
+          <p>——太宰治《叶》</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
@@ -38,7 +39,8 @@
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-mdx789.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <p>凡事需多听但少言；聆听他人之意见，但保留自己之判断。</p>
+          <p>——莎士比亚 《哈姆雷特》</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
@@ -46,7 +48,11 @@
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-oxkjgm.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <p>
+            楼道角落里阳光每天盛开 你很久前也在 很久前的花肥肥地开在窗外
+            你很久前也毛茸茸地在窗里开 它们为什么能长盛不衰 我们为什么屡战屡败
+          </p>
+          <p>——冯唐《记梦》</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
@@ -54,7 +60,8 @@
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-wypo96.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <p>“每个人的生命里，都有最艰难的那一年，将人生变得美好而辽阔。”</p>
+          <p>——《岛上书店》</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
@@ -62,7 +69,10 @@
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-xlx5mv.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <p>
+            我终其一生追求的，也不过就是别人在谈论我的时候眼中没有讥讽，话语中没有偏颇。还有，不要活的太久。
+          </p>
+          <p>——吴忠全《有声默片》</p>
           <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>

@@ -32,8 +32,8 @@
             <p class="academy">学院：互联网+</p>
             <p class="class">班级：软件4班</p>
             <p class="division">负责模块：PPT撰稿、演讲</p>
-            <p><em>QQ： </em>416317444</p>
-            <p><em>weChat： </em>rebirth0622</p>
+            <p><em>QQ： </em>754744281</p>
+            <p><em>weChat： </em>754744281</p>
           </div>
         </div>
       </div>

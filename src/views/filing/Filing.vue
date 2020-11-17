@@ -14,7 +14,7 @@
       </el-timeline>
       <div v-if="articleList.length == 0" class="emptyHint">
         <p>
-          该分类暂无文章，博主正在努力构思
+          这里啥都没有，博主正在努力
           <i class="iconfont icon-biaoqing1"></i>
         </p>
       </div>
