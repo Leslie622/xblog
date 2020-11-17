@@ -79,10 +79,6 @@ canvas {
 	text-align: center;
 }
 
-.demo-1 .frame, .demo-2 .frame, .demo-3 .frame, .demo-4 .frame {
-	opacity: 0;
-}
-
 .frame__deco {
 	margin-top: 10vh;
 }
