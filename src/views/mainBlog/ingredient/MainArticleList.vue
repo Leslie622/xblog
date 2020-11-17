@@ -2,6 +2,12 @@
   <div class="articleList-wrapper">
     <div class="articleList">
       <slot>
+        <div v-if="articleDatas.length == 0" class="emptyHint">
+          <p>
+            该分类暂无文章，博主正在努力构思
+            <i class="iconfont icon-biaoqing1"></i>
+          </p>
+        </div>
         <main-article-item
           v-for="(item, index) in articleDatas"
           :articleData="item"
@@ -26,7 +32,6 @@
  
 <script>
 import MainArticleItem from "./MainArticleItem";
-import { Message } from "element-ui";
 
 export default {
   components: {
@@ -77,14 +82,6 @@ export default {
         if (res.data.data.length != 0) {
           this.articleDatas = res.data.data;
         } else {
-          Message({
-            message: "该分类暂无文章",
-            type: "warning",
-            duration: 3000,
-            center: true,
-            showClose: true,
-            customClass:"eleMessage"
-          });
         }
       });
     },
@@ -119,6 +116,11 @@ export default {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
+}
+
+.icon-biaoqing1 {
+  vertical-align: top;
+  font-size: 25px;
 }
 
 @media (max-width: 990px) {

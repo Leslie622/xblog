@@ -74,7 +74,7 @@ img {
 .title {
   margin: 2.5rem 0;
   padding: 0 2rem;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 
 .bar {
@@ -118,10 +118,10 @@ img {
 
 .digest {
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 3rem;
   width: 100%;
   font-family: sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transform: translate3d(0, 0, 0);
 }
 

@@ -31,8 +31,6 @@ Vue.prototype.$request = request;
 //图片地址
 Vue.prototype.$imgPrefix = 'https://mdw.oss-cn-hangzhou.aliyuncs.com/';
 
-import { ityped } from "common/ityped";
-Vue.prototype.$ityped = ityped
 
 new Vue({
   render: h => h(Blog),

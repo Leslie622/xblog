@@ -23,6 +23,7 @@
   z-index: 1;
   font-size: 10px;
   color: #c0c4cc;
+  pointer-events: none;
 }
 
 .articleSelect .el-input {

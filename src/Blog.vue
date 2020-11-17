@@ -1,7 +1,9 @@
 <template>
   <div id="Blog" :class="[theme == 2 ? 'light' : 'dark']">
     <router-view />
-    <theme-switch-btn v-if="$route.path == '/Home'" />
+    <theme-switch-btn
+      v-if="$route.path == '/Home' || $route.path == '/Friends'"
+    />
     <back-top></back-top>
   </div>
 </template>
@@ -17,7 +19,7 @@ export default {
   },
   data() {
     return {
-      theme: +window.localStorage.getItem("theme"),
+      theme: 2,
     };
   },
   created() {
@@ -33,6 +35,7 @@ export default {
     initTheme() {
       if (!window.localStorage.getItem("theme")) {
         window.localStorage.setItem("theme", 2);
+        this.theme = +window.localStorage.getItem("theme");
       }
     },
   },

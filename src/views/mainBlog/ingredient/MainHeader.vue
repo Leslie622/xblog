@@ -43,7 +43,11 @@ export default {
     return {
       linkList: [
         { path: "/", value: "主页", iconClass: "iconfont icon-icon" },
-        { path: "/MainBlog", value: "文章", iconClass: "iconfont icon-wenzhang" },
+        {
+          path: "/MainBlog",
+          value: "文章",
+          iconClass: "iconfont icon-wenzhang",
+        },
         { path: "/Filing", value: "归档", iconClass: "iconfont icon-guidang" },
         { path: "/Diary", value: "日记", iconClass: "el-icon-notebook-2" },
         { path: "/Friends", value: "友链", iconClass: "iconfont icon-pengyou" },
@@ -67,7 +71,6 @@ export default {
       }
     });
   },
-
   mounted() {
     this.listenerResize();
   },

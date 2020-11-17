@@ -1,15 +1,23 @@
 <template>
   <main-blog>
     <main-filing class="filing">
-      <el-timeline class="filingTimeLine">
+      <el-timeline class="filingTimeLine" v-if="articleList.length != 0">
         <el-timeline-item
           v-for="(item, index) in articleList"
           :key="index"
           :timestamp="item.create_time"
         >
-          {{ item.title }}
+          <div @click="gotoDetail(item)">
+            {{ item.title }}
+          </div>
         </el-timeline-item>
       </el-timeline>
+      <div v-if="articleList.length == 0" class="emptyHint">
+        <p>
+          该分类暂无文章，博主正在努力构思
+          <i class="iconfont icon-biaoqing1"></i>
+        </p>
+      </div>
     </main-filing>
   </main-blog>
 </template>
@@ -30,12 +38,22 @@ export default {
   },
   created() {
     this.$request({
-      method:"get",
-      url:`blog/query/withcategory?cate_id=${+window.localStorage.getItem("articleCategory")}&pageNum=1&pageSize=1000`
+      method: "get",
+      url: `blog/query/withcategory?cate_id=${+window.localStorage.getItem(
+        "articleCategory"
+      )}&pageNum=1&pageSize=1000`,
     }).then((res) => {
-      console.log(res);
-      this.articleList = res.data.data
-     })
+      this.articleList = res.data.data;
+    });
+  },
+  methods: {
+    gotoDetail(item) {
+      let Detail = this.$router.resolve({
+        path: "/Detail",
+        query: { id: item.id },
+      });
+      window.open(Detail.href, "_blank");
+    },
   },
 };
 </script>

@@ -31,7 +31,7 @@
             <p class="name">姓名：李儒龙</p>
             <p class="academy">学院：互联网+</p>
             <p class="class">班级：软件4班</p>
-            <p class="division">负责模块：PPT撰写演讲</p>
+            <p class="division">负责模块：PPT撰稿、演讲</p>
             <p><em>QQ： </em>416317444</p>
             <p><em>weChat： </em>rebirth0622</p>
           </div>

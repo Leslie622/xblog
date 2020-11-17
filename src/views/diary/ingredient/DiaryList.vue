@@ -1,9 +1,6 @@
 <template>
   <main class="main">
-    <transition
-      appear
-      enter-active-class="animate__animated animate__swing animate__slow"
-    >
+    <transition appear enter-active-class="animate__animated animate__fadeIn">
       <div
         class="main-inner"
         :style="{
@@ -12,28 +9,29 @@
         }"
       >
         <div class="card">
+          <img src="../../../assets/img/bg/wallhaven-8o77w2.jpg" alt="" />
+          <h2 class="date">20 / 9 / 20</h2>
+          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
+          <div class="read-more" @click="hint">
+            <span> <i class="el-icon-more"></i></span>
+          </div>
+        </div>
+        <div class="card">
           <img src="../../../assets/img/bg/diaryBG.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
           <p>
             这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字这是一段文字
           </p>
-          <div class="read-more">
+          <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
-        <div class="card">
-          <img src="../../../assets/img/avatar/cheung.jpg" alt="" />
-          <h2 class="date">20 / 9 / 20</h2>
-          <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-          <div class="read-more">
-            <span> <i class="el-icon-more"></i></span>
-          </div>
-        </div>
+
         <div class="card">
           <img src="../../../assets/img/bg/wallhaven-eyjjrl.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-          <div class="read-more">
+          <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
@@ -41,7 +39,7 @@
           <img src="../../../assets/img/bg/wallhaven-mdx789.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-          <div class="read-more">
+          <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
@@ -49,7 +47,7 @@
           <img src="../../../assets/img/bg/wallhaven-oxkjgm.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-          <div class="read-more">
+          <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
@@ -57,7 +55,7 @@
           <img src="../../../assets/img/bg/wallhaven-wypo96.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-          <div class="read-more">
+          <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
@@ -65,7 +63,7 @@
           <img src="../../../assets/img/bg/wallhaven-xlx5mv.jpg" alt="" />
           <h2 class="date">20 / 9 / 20</h2>
           <p>这是一段文字这是一段文字这是一段文字这是一段文字这是一</p>
-          <div class="read-more">
+          <div class="read-more" @click="hint">
             <span> <i class="el-icon-more"></i></span>
           </div>
         </div>
@@ -81,6 +79,17 @@ export default {
       count: 3,
     };
   },
+  methods: {
+    hint() {
+      this.$alert(
+        "因时间关系，此页面相关功能尚未完善，目前仅完成页面构思和静态文字，没有进行数据渲染，请谅解！",
+        "提示",
+        {
+          confirmButtonText: "确定",
+        }
+      );
+    },
+  },
 };
 </script>
 
@@ -94,6 +103,7 @@ export default {
 
 .main-inner {
   column-gap: 0;
+  animation: move 0.4s linear forwards;
 }
 
 .columns_1 {
@@ -151,6 +161,15 @@ export default {
 .read-more i {
   font-size: 25px;
   color: rgb(167, 165, 165);
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1200px) {

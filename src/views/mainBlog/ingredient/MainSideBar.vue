@@ -15,26 +15,26 @@
           <p>观看</p>
         </div>
         <div class="diary">
-          <span>222</span>
+          <span>12</span>
           <p>日记</p>
         </div>
         <div class="mark">
-          <span>333</span>
+          <span>0</span>
           <p>留言</p>
         </div>
       </div>
       <div class="links-of-author">
         <div>
-          <a href="https://github.com/Leslie622" target="_blank">
-            <i class="iconfont icon-github1"></i
+          <a
+            href="https://blog.csdn.net/LeslieCheung_?spm=1001.2014.3001.5113"
+            target="_blank"
+          >
+            <i class="iconfont icon-csdn"></i
           ></a>
         </div>
         <div>
           <el-popover placement="top-start" trigger="hover">
-            <img
-              src="../../../assets/img/contact/weChatQR.png"
-              class="weChatQR"
-            />
+            <img src="~assets/img/contact/weChatQR.png" class="weChatQR" />
             <i class="iconfont icon-weixin1" slot="reference"></i>
           </el-popover>
         </div>
@@ -75,7 +75,6 @@ export default {
           method: "get",
           url: `blog/query/withcategory?cate_id=${this.articleList[i]}&pageNum=1&pageSize=1000`,
         }).then((res) => {
-          console.log(res.data.data);
           res.data.data.forEach((article) => {
             this.view += article.view;
           });
@@ -110,6 +109,7 @@ export default {
 .avatar {
   margin: 20px 0;
   width: 100%;
+  cursor: pointer;
 }
 
 .avatar img {
@@ -181,6 +181,10 @@ export default {
 
 .weChatQR {
   width: 150px;
+}
+
+.icon-csdn {
+  font-size: 15px;
 }
 
 @media (max-width: 990px) {

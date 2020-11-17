@@ -5,15 +5,17 @@
         <div class="siteLogo blackLogo">Leslie</div>
         <div class="siteLogo whiteLogo">Leslie</div>
       </div>
-      <div class="homeMenu">
-        <router-link
-          v-for="(item, index) in this.linkList"
-          :to="item.path"
-          class="linkItem"
-          :key="index"
-          >{{ item.value }}</router-link
-        >
-      </div>
+      <slot>
+        <div class="homeMenu">
+          <router-link
+            v-for="(item, index) in this.linkList"
+            :to="item.path"
+            class="linkItem"
+            :key="index"
+            >{{ item.value }}</router-link
+          >
+        </div>
+      </slot>
     </div>
   </div>
 </template>
@@ -100,48 +102,45 @@ export default {
       rgba(17, 17, 17, 0.02) 100%
     ),
     linear-gradient(
-        257deg,
-        rgba(65, 65, 65, 0.02) 0%,
-        rgba(65, 65, 65, 0.02) 11%,
-        transparent 11%,
-        transparent 92%,
-        rgba(53, 53, 53, 0.02) 92%,
-        rgba(53, 53, 53, 0.02) 100%
-      ),
-      linear-gradient(
-          191deg,
-          rgba(5, 5, 5, 0.02) 0%,
-          rgba(5, 5, 5, 0.02) 1%,
-          transparent 1%,
-          transparent 45%,
-          rgba(19, 19, 19, 0.02) 45%,
-          rgba(19, 19, 19, 0.02) 100%
-        ),
-        linear-gradient(
-            29deg,
-            rgba(28, 28, 28, 0.02) 0%,
-            rgba(28, 28, 28, 0.02) 33%,
-            transparent 33%,
-            transparent 40%,
-            rgba(220, 220, 220, 0.02) 40%,
-            rgba(220, 220, 220, 0.02) 100%
-          ),
-          linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+      257deg,
+      rgba(65, 65, 65, 0.02) 0%,
+      rgba(65, 65, 65, 0.02) 11%,
+      transparent 11%,
+      transparent 92%,
+      rgba(53, 53, 53, 0.02) 92%,
+      rgba(53, 53, 53, 0.02) 100%
+    ),
+    linear-gradient(
+      191deg,
+      rgba(5, 5, 5, 0.02) 0%,
+      rgba(5, 5, 5, 0.02) 1%,
+      transparent 1%,
+      transparent 45%,
+      rgba(19, 19, 19, 0.02) 45%,
+      rgba(19, 19, 19, 0.02) 100%
+    ),
+    linear-gradient(
+      29deg,
+      rgba(28, 28, 28, 0.02) 0%,
+      rgba(28, 28, 28, 0.02) 33%,
+      transparent 33%,
+      transparent 40%,
+      rgba(220, 220, 220, 0.02) 40%,
+      rgba(220, 220, 220, 0.02) 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 .indexPage {
-  display: flex;
-  flex-direction: column;
   font-family: Arial;
+  text-align: center;
 }
 
 .logo-content {
   position: relative;
-  flex: 1;
-  margin: 0 auto;
+  display: inline-block;
   font-family: Monoton-Regular;
   font-size: 7rem;
-  text-align: center;
 }
 
 .whiteLogo {
@@ -151,32 +150,26 @@ export default {
   overflow: hidden;
 }
 
-.dark .whiteLogo,
-.light .blackLogo {
-  animation: logoAnimate 1s forwards;
-}
-
 .blackLogo {
   position: relative;
   color: black;
   overflow: hidden;
 }
 
+.dark .whiteLogo,
+.light .blackLogo {
+  animation: logoAnimate 1s forwards;
+}
+
 .homeMenu {
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
   padding: 2rem 0;
-  text-align: center;
 }
 
 .linkItem {
-  flex: 1;
   padding: 1rem;
   font-size: 1.5rem;
-  text-align: center;
   color: #249ffd;
+  transition: all 0.3s;
 }
 
 .linkItem:hover {
