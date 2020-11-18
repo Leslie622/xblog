@@ -42,18 +42,16 @@ export default {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1624px) {
   .time-shaft {
     display: none;
   }
   .diary {
     min-width: auto;
-    background-image: url("~assets/img/bg/wallhaven-zm1kwy.jpg");
-    background-position: -240px 0;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1624px) {
   .time-select {
     display: none;
   }

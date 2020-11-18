@@ -45,15 +45,15 @@
 <script>
 export default {
   created() {
-    // if (!!window.ActiveXObject || "ActiveXObject" in window) {
-    //   this.$alert(
-    //     "此页面使用Tweenmax.JS补间动画,在ie下有兼容性问题,请使用非ie",
-    //     "提示",
-    //     {
-    //       confirmButtonText: "确定",
-    //     }
-    //   );
-    // }
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+      this.$alert(
+        "此页面使用Tweenmax.JS补间动画,在ie下有兼容性问题,请使用非ie",
+        "提示",
+        {
+          confirmButtonText: "确定",
+        }
+      );
+    }
     document.documentElement.className = "js";
     var supportsCssVars = function () {
       var e,

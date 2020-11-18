@@ -39,3 +39,20 @@
 .el-date-picker__header {
   margin: 6px;
 }
+
+@media (max-width: 1624px) and (min-width:1024px) {
+  .diary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .time-select {
+    width: 1200px;
+  }
+  .el-picker-panel.el-date-picker.el-popper {
+    width: 1200px;
+  }
+  .el-picker-panel.el-date-picker.el-popper {
+    margin: 0;
+  }
+}

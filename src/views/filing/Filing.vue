@@ -37,14 +37,16 @@ export default {
     };
   },
   created() {
-    this.$request({
-      method: "get",
-      url: `blog/query/withcategory?cate_id=${+window.localStorage.getItem(
-        "articleCategory"
-      )}&pageNum=1&pageSize=1000`,
-    }).then((res) => {
-      this.articleList = res.data.data;
-    });
+    if (window.localStorage.getItem("articleCategory")) {
+      this.requestCateTotal(+window.localStorage.getItem("articleCategory"));
+    } else {
+      this.$request({
+        method: "get",
+        url: `blog/category/query?user_id=8`,
+      }).then((res) => {
+        this.requestCateTotal(res.data.data[0].id);
+      });
+    }
   },
   methods: {
     gotoDetail(item) {
@@ -53,6 +55,14 @@ export default {
         query: { id: item.id },
       });
       window.open(Detail.href, "_blank");
+    },
+    requestCateTotal(foo) {
+      this.$request({
+        method: "get",
+        url: `blog/query/withcategory?cate_id=${foo}&pageNum=1&pageSize=1000`,
+      }).then((res) => {
+        this.articleList = res.data.data;
+      });
     },
   },
 };
