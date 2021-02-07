@@ -58,7 +58,7 @@ export default {
   display: flex;
   justify-content: center;
   height: 100vh;
-  font-family: sans-serif;
+  font-family: "微软雅黑";
   background-color: #eee;
   overflow-y: scroll;
 }
@@ -92,8 +92,8 @@ export default {
 
 .articleContent {
   z-index: 0;
-  font-family: sans-serif;
-  font-size: 18px;
+  font-family: 微软雅黑;
+  font-size: 15px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   color: #000;
